@@ -1665,7 +1665,36 @@
           }
         },
         "refLine": {
-          "refLines": []
+          "refLines": [
+            {
+              "show": true,
+              "label": "",
+              "showLabel": true,
+              "refLineExpr": {
+                "value": {
+                  "qValueExpression": {
+                    "qExpr": "avg([Total Cloud Cover daily mean [sfc]]])"
+                  }
+                },
+                "label": {
+                  "qStringExpression": {
+                    "qExpr": "avg([Total Cloud Cover daily mean [sfc]]])"
+                  }
+                }
+              },
+              "showValue": true,
+              "paletteColor": {
+                "index": -1,
+                "color": "#333333"
+              },
+              "style": {
+                "lineThickness": 2,
+                "lineType": ""
+              },
+              "coloredBackground": false,
+              "cId": "GBkus"
+            }
+          ]
         },
         "showTitles": true,
         "title": "Total Cloud Cover % (Daily Mean)",

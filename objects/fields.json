@@ -117,7 +117,7 @@
   },
   {
     "qName": "DataFile",
-    "qCardinal": 43,
+    "qCardinal": 46,
     "qTags": [
       "$text",
       "$ascii"
@@ -142,13 +142,12 @@
       "Alertes",
       "Production",
       "Meteo",
-      "Sunrise_2020",
-      "$OFMap Date"
+      "Sunrise_2020"
     ]
   },
   {
     "qName": "Date.Short",
-    "qCardinal": 295,
+    "qCardinal": 315,
     "qTags": [
       "$numeric",
       "$integer",
@@ -161,7 +160,7 @@
   },
   {
     "qName": "Date_Meteo",
-    "qCardinal": 253,
+    "qCardinal": 268,
     "qTags": [
       "$numeric",
       "$integer",
@@ -572,7 +571,7 @@
   },
   {
     "qName": "Kwh",
-    "qCardinal": 532,
+    "qCardinal": 552,
     "qTags": [
       "$numeric"
     ],
@@ -598,7 +597,7 @@
   },
   {
     "qName": "Month",
-    "qCardinal": 10,
+    "qCardinal": 11,
     "qTags": [
       "$numeric",
       "$integer"
@@ -609,7 +608,7 @@
   },
   {
     "qName": "Musson Mean Sea Level Pressure [MSL]",
-    "qCardinal": 136,
+    "qCardinal": 143,
     "qTags": [
       "$numeric"
     ],
@@ -619,7 +618,7 @@
   },
   {
     "qName": "Musson Mean Sea Level Pressure [MSL]1",
-    "qCardinal": 133,
+    "qCardinal": 142,
     "qTags": [
       "$numeric"
     ],
@@ -629,7 +628,7 @@
   },
   {
     "qName": "Musson Mean Sea Level Pressure [MSL]2",
-    "qCardinal": 199,
+    "qCardinal": 214,
     "qTags": [
       "$numeric"
     ],
@@ -639,7 +638,7 @@
   },
   {
     "qName": "Musson Sunshine Duration",
-    "qCardinal": 195,
+    "qCardinal": 210,
     "qTags": [
       "$numeric"
     ],
@@ -649,7 +648,7 @@
   },
   {
     "qName": "Musson Wind Speed [10 m]",
-    "qCardinal": 168,
+    "qCardinal": 181,
     "qTags": [
       "$numeric"
     ],
@@ -659,7 +658,7 @@
   },
   {
     "qName": "Musson Wind Speed [10 m]2",
-    "qCardinal": 202,
+    "qCardinal": 217,
     "qTags": [
       "$numeric"
     ],
@@ -669,7 +668,7 @@
   },
   {
     "qName": "Musson Wind Speed [80 m]",
-    "qCardinal": 169,
+    "qCardinal": 181,
     "qTags": [
       "$numeric"
     ],
@@ -679,7 +678,7 @@
   },
   {
     "qName": "Musson Wind Speed [80 m]2",
-    "qCardinal": 202,
+    "qCardinal": 217,
     "qTags": [
       "$numeric"
     ],
@@ -700,7 +699,7 @@
   },
   {
     "qName": "Pac1",
-    "qCardinal": 3107,
+    "qCardinal": 3111,
     "qTags": [
       "$numeric",
       "$integer"
@@ -733,7 +732,7 @@
   },
   {
     "qName": "Relative Humidity daily mean [2 m above gnd]",
-    "qCardinal": 234,
+    "qCardinal": 246,
     "qTags": [
       "$numeric"
     ],
@@ -763,7 +762,7 @@
   },
   {
     "qName": "Temperature daily max [2 m above gnd]",
-    "qCardinal": 240,
+    "qCardinal": 254,
     "qTags": [
       "$numeric"
     ],
@@ -773,7 +772,7 @@
   },
   {
     "qName": "Temperature daily mean [2 m above gnd]",
-    "qCardinal": 252,
+    "qCardinal": 267,
     "qTags": [
       "$numeric"
     ],
@@ -783,7 +782,7 @@
   },
   {
     "qName": "Temperature daily min [2 m above gnd]",
-    "qCardinal": 241,
+    "qCardinal": 256,
     "qTags": [
       "$numeric"
     ],
@@ -813,7 +812,7 @@
   },
   {
     "qName": "Time(GMT +1)",
-    "qCardinal": 64236,
+    "qCardinal": 67302,
     "qTags": [
       "$text",
       "$ascii"
@@ -836,7 +835,7 @@
   },
   {
     "qName": "TimeStamp",
-    "qCardinal": 64236,
+    "qCardinal": 67302,
     "qTags": [
       "$numeric",
       "$timestamp"
@@ -868,7 +867,7 @@
   },
   {
     "qName": "Total Cloud Cover daily mean [sfc]",
-    "qCardinal": 221,
+    "qCardinal": 235,
     "qTags": [
       "$numeric"
     ],
@@ -888,7 +887,7 @@
   },
   {
     "qName": "Total Energy(kWh)",
-    "qCardinal": 34619,
+    "qCardinal": 35840,
     "qTags": [
       "$numeric"
     ],
@@ -898,7 +897,7 @@
   },
   {
     "qName": "Total Precipitation (high resolution) daily sum [sfc]",
-    "qCardinal": 69,
+    "qCardinal": 72,
     "qTags": [
       "$numeric"
     ],
@@ -940,7 +939,7 @@
   },
   {
     "qName": "Vpv1",
-    "qCardinal": 2363,
+    "qCardinal": 2381,
     "qTags": [
       "$numeric"
     ],
@@ -950,7 +949,7 @@
   },
   {
     "qName": "Vpv2",
-    "qCardinal": 1605,
+    "qCardinal": 1626,
     "qTags": [
       "$numeric"
     ],
@@ -971,7 +970,7 @@
   },
   {
     "qName": "Wind Direction daily mean [10 m above gnd]",
-    "qCardinal": 253,
+    "qCardinal": 268,
     "qTags": [
       "$numeric"
     ],
@@ -981,7 +980,7 @@
   },
   {
     "qName": "Wind Direction daily mean [80 m above gnd]",
-    "qCardinal": 253,
+    "qCardinal": 268,
     "qTags": [
       "$numeric"
     ],
@@ -991,7 +990,7 @@
   },
   {
     "qName": "Wind Speed daily max [10 m above gnd]",
-    "qCardinal": 247,
+    "qCardinal": 261,
     "qTags": [
       "$numeric"
     ],
@@ -1001,7 +1000,7 @@
   },
   {
     "qName": "Wind Speed daily max [80 m above gnd]",
-    "qCardinal": 246,
+    "qCardinal": 260,
     "qTags": [
       "$numeric"
     ],

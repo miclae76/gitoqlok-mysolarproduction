@@ -35,12 +35,26 @@
         "col": 9,
         "row": 0,
         "colspan": 15,
-        "rowspan": 12,
+        "rowspan": 6,
         "bounds": {
           "y": 0,
           "x": 37.5,
           "width": 62.5,
-          "height": 100
+          "height": 50
+        }
+      },
+      {
+        "name": "SBhTpg",
+        "type": "distributionplot",
+        "col": 9,
+        "row": 6,
+        "colspan": 15,
+        "rowspan": 6,
+        "bounds": {
+          "y": 50,
+          "x": 37.5,
+          "width": 62.5,
+          "height": 50
         }
       }
     ],
@@ -2265,13 +2279,13 @@
             8
           ],
           "columnWidths": [
-            57,
-            90,
-            87,
-            90,
-            241,
+            81,
+            116,
+            111,
+            112,
+            303,
             86,
-            158,
+            200,
             93,
             -1
           ],
@@ -2309,7 +2323,7 @@
           {
             "key": "theme",
             "content": {
-              "fontSize": 15,
+              "fontSize": 18,
               "fontColor": {
                 "index": -1,
                 "color": null
@@ -2325,7 +2339,7 @@
               }
             },
             "header": {
-              "fontSize": 14,
+              "fontSize": 16,
               "fontColor": {
                 "index": 6,
                 "color": "#4477aa"
@@ -2351,6 +2365,1476 @@
           "wrapTextInCells": true
         },
         "visualization": "table"
+      },
+      "qChildren": []
+    },
+    {
+      "qProperty": {
+        "qInfo": {
+          "qId": "SBhTpg",
+          "qType": "distributionplot"
+        },
+        "qMetaDef": {},
+        "qHyperCubeDef": {
+          "qDimensions": [
+            {
+              "qDef": {
+                "qGrouping": "N",
+                "qFieldDefs": [
+                  "=Date(Date, 'DD/MM')"
+                ],
+                "qFieldLabels": [
+                  "Date"
+                ],
+                "qSortCriterias": [
+                  {
+                    "qSortByNumeric": 1,
+                    "qSortByAscii": 1,
+                    "qSortByLoadOrder": 1,
+                    "qExpression": {}
+                  }
+                ],
+                "qNumberPresentations": [],
+                "qActiveField": 0,
+                "autoSort": true,
+                "cId": "FExMJEG",
+                "othersLabel": "Others"
+              },
+              "qOtherTotalSpec": {
+                "qOtherMode": "OTHER_OFF",
+                "qOtherCounted": {
+                  "qv": "10"
+                },
+                "qOtherLimit": {
+                  "qv": "0"
+                },
+                "qOtherLimitMode": "OTHER_GE_LIMIT",
+                "qForceBadValueKeeping": true,
+                "qApplyEvenWhenPossiblyWrongResult": true,
+                "qOtherSortMode": "OTHER_SORT_DESCENDING",
+                "qTotalMode": "TOTAL_OFF",
+                "qReferencedExpression": {}
+              },
+              "qOtherLabel": {
+                "qv": "Others"
+              },
+              "qTotalLabel": {},
+              "qCalcCond": {},
+              "qAttributeExpressions": [],
+              "qAttributeDimensions": [],
+              "qCalcCondition": {
+                "qCond": {},
+                "qMsg": {}
+              },
+              "showTitles": true,
+              "title": "",
+              "subtitle": "",
+              "footnote": "",
+              "disableNavMenu": false,
+              "showDetails": false,
+              "qStateName": "",
+              "othersLabel": "Others"
+            },
+            {
+              "qDef": {
+                "qGrouping": "N",
+                "qFieldDefs": [
+                  "Date.autoCalendar.Month"
+                ],
+                "qFieldLabels": [
+                  "Date.Month"
+                ],
+                "qSortCriterias": [
+                  {
+                    "qSortByNumeric": 1,
+                    "qSortByAscii": 1,
+                    "qSortByLoadOrder": 1,
+                    "qExpression": {}
+                  }
+                ],
+                "qNumberPresentations": [],
+                "qActiveField": 0,
+                "autoSort": true,
+                "cId": "evHysPL",
+                "othersLabel": "Others"
+              },
+              "qNullSuppression": true,
+              "qOtherTotalSpec": {
+                "qOtherMode": "OTHER_OFF",
+                "qOtherCounted": {
+                  "qv": "10"
+                },
+                "qOtherLimit": {
+                  "qv": "0"
+                },
+                "qOtherLimitMode": "OTHER_GE_LIMIT",
+                "qSuppressOther": true,
+                "qForceBadValueKeeping": true,
+                "qApplyEvenWhenPossiblyWrongResult": true,
+                "qOtherSortMode": "OTHER_SORT_DESCENDING",
+                "qTotalMode": "TOTAL_OFF",
+                "qReferencedExpression": {}
+              },
+              "qOtherLabel": {
+                "qv": "Others"
+              },
+              "qTotalLabel": {},
+              "qCalcCond": {},
+              "qAttributeExpressions": [],
+              "qAttributeDimensions": [],
+              "qCalcCondition": {
+                "qCond": {},
+                "qMsg": {}
+              },
+              "showTitles": true,
+              "title": "",
+              "subtitle": "",
+              "footnote": "",
+              "disableNavMenu": false,
+              "showDetails": false,
+              "qStateName": "",
+              "othersLabel": "Others"
+            }
+          ],
+          "qMeasures": [
+            {
+              "qDef": {
+                "qLabel": "Daily Energy (kWh)",
+                "qTags": [],
+                "qGrouping": "N",
+                "qDef": "sum({<Date={\"=sum(Kwh)>0\"}>}Kwh)+sum({<Date={\"=sum(Kwh)<>0\"}>}Correction)",
+                "qNumFormat": {
+                  "qType": "U",
+                  "qnDec": 10,
+                  "qUseThou": 0
+                },
+                "qAccumulate": 0,
+                "qActiveExpression": 0,
+                "qExpressions": [],
+                "autoSort": true,
+                "cId": "Ddb",
+                "numFormatFromTemplate": true
+              },
+              "qSortBy": {
+                "qSortByNumeric": -1,
+                "qSortByLoadOrder": 1,
+                "qExpression": {}
+              },
+              "qAttributeExpressions": [
+                {
+                  "qExpression": "if (Date = FirstSortedValue(total Date, -aggr(sum(Kwh)+rangesum(Correction), Date)), green(), if(sum(Alertes)>0, LightRed(), '#4477aa'))\r\n//\tif (Date = FirstSortedValue(Date, -aggr(total Max(aggr(avg({<Inverter={\"AAN*\"}>}Pac1), TimeBucket, Date))+Max(aggr(avg({<Inverter={\"AAR*\"}>}Pac1), TimeBucket, Date)), Date)), '#ffcf02', '#4477aa'))",
+                  "qAttribute": true,
+                  "id": "colorByExpression"
+                }
+              ],
+              "qAttributeDimensions": [],
+              "qCalcCond": {},
+              "qCalcCondition": {
+                "qCond": {},
+                "qMsg": {}
+              },
+              "qTrendLines": [
+                {
+                  "qType": "AVERAGE",
+                  "qXColIx": 0,
+                  "qContinuousXAxis": "Never",
+                  "qMultiDimMode": "Sum",
+                  "label": "Avg",
+                  "style": {
+                    "autoColor": true,
+                    "paletteColor": {
+                      "color": "#f93f17",
+                      "index": 9
+                    },
+                    "dashed": true,
+                    "lineDash": "8, 4"
+                  },
+                  "cId": "SyKT"
+                }
+              ],
+              "qMiniChartDef": {
+                "qSortBy": {
+                  "qExpression": {}
+                },
+                "qOtherTotalSpec": {
+                  "qOtherMode": "OTHER_OFF",
+                  "qOtherCounted": {},
+                  "qOtherLimit": {},
+                  "qOtherLimitMode": "OTHER_GT_LIMIT",
+                  "qForceBadValueKeeping": true,
+                  "qApplyEvenWhenPossiblyWrongResult": true,
+                  "qOtherSortMode": "OTHER_SORT_DESCENDING",
+                  "qTotalMode": "TOTAL_OFF",
+                  "qReferencedExpression": {}
+                },
+                "qMaxNumberPoints": -1,
+                "qAttributeExpressions": []
+              },
+              "showTitles": true,
+              "title": "",
+              "subtitle": "",
+              "footnote": "",
+              "disableNavMenu": false,
+              "showDetails": false,
+              "qStateName": ""
+            }
+          ],
+          "qInterColumnSortOrder": [
+            1,
+            2,
+            0
+          ],
+          "qSuppressZero": true,
+          "qSuppressMissing": true,
+          "qInitialDataFetch": [
+            {
+              "qLeft": 0,
+              "qTop": 0,
+              "qWidth": 0,
+              "qHeight": 0
+            }
+          ],
+          "qReductionMode": "N",
+          "qMode": "K",
+          "qPseudoDimPos": -1,
+          "qNoOfLeftDims": -1,
+          "qAlwaysFullyExpanded": true,
+          "qMaxStackedCells": 5000,
+          "qCalcCond": {},
+          "qTitle": {},
+          "qCalcCondition": {
+            "qCond": {},
+            "qMsg": {}
+          },
+          "qColumnOrder": [],
+          "qExpansionState": [],
+          "qLayoutExclude": {
+            "qHyperCubeDef": {
+              "qDimensions": [],
+              "qMeasures": [],
+              "qInterColumnSortOrder": [],
+              "qInitialDataFetch": [],
+              "qReductionMode": "N",
+              "qMode": "S",
+              "qPseudoDimPos": -1,
+              "qNoOfLeftDims": -1,
+              "qMaxStackedCells": 5000,
+              "qCalcCond": {},
+              "qTitle": {},
+              "qCalcCondition": {
+                "qCond": {},
+                "qMsg": {}
+              },
+              "qColumnOrder": [],
+              "qExpansionState": []
+            }
+          }
+        },
+        "refLine": {
+          "refLines": [
+            {
+              "show": true,
+              "label": "Avg.",
+              "paletteColor": {
+                "index": 6,
+                "color": "#4477aa"
+              },
+              "refLineExpr": {
+                "value": {
+                  "qValueExpression": {
+                    "qExpr": "avg({<Date={\"=sum(Kwh)>0\"}>}total aggr(Sum({<Date={\"=sum(Kwh)>0\"}>}Kwh)+rangesum(Correction), Date))"
+                  }
+                },
+                "label": {
+                  "qStringExpression": {
+                    "qExpr": "avg({<Date={\"=sum(Kwh)>0\"}>}total aggr(Sum({<Date={\"=sum(Kwh)>0\"}>}Kwh)+rangesum(Correction), Date))"
+                  }
+                }
+              },
+              "cId": "mKfvpnp"
+            },
+            {
+              "show": true,
+              "label": "- σ",
+              "paletteColor": {
+                "index": 5,
+                "color": "#7db8da"
+              },
+              "refLineExpr": {
+                "value": {
+                  "qValueExpression": {
+                    "qExpr": "=avg({<Date={\"=sum(Kwh)>0\"}>}total aggr(Sum({<Date={\"=sum(Kwh)>0\"}>}Kwh)+rangesum(Correction), Date))-StDev({<Date={\"=sum(Kwh)>0\"}>}total aggr(Sum({<Date={\"=sum(Kwh)>0\"}>}Kwh)+rangesum(Correction), Date))"
+                  }
+                },
+                "label": {
+                  "qStringExpression": {
+                    "qExpr": "=avg({<Date={\"=sum(Kwh)>0\"}>}total aggr(Sum({<Date={\"=sum(Kwh)>0\"}>}Kwh)+rangesum(Correction), Date))-StDev({<Date={\"=sum(Kwh)>0\"}>}total aggr(Sum({<Date={\"=sum(Kwh)>0\"}>}Kwh)+rangesum(Correction), Date))"
+                  }
+                }
+              },
+              "cId": "mTqvna"
+            },
+            {
+              "show": true,
+              "label": "+ σ",
+              "paletteColor": {
+                "index": 5,
+                "color": "#7db8da"
+              },
+              "refLineExpr": {
+                "value": {
+                  "qValueExpression": {
+                    "qExpr": "=avg({<Date={\"=sum(Kwh)>0\"}>}total aggr(Sum({<Date={\"=sum(Kwh)>0\"}>}Kwh)+rangesum(Correction), Date))+StDev({<Date={\"=sum(Kwh)>0\"}>}total aggr(Sum({<Date={\"=sum(Kwh)>0\"}>}Kwh)+rangesum(Correction), Date))"
+                  }
+                },
+                "label": {
+                  "qStringExpression": {
+                    "qExpr": "=avg({<Date={\"=sum(Kwh)>0\"}>}total aggr(Sum({<Date={\"=sum(Kwh)>0\"}>}Kwh)+rangesum(Correction), Date))+StDev({<Date={\"=sum(Kwh)>0\"}>}total aggr(Sum({<Date={\"=sum(Kwh)>0\"}>}Kwh)+rangesum(Correction), Date))"
+                  }
+                }
+              },
+              "cId": "PkegESZ"
+            }
+          ]
+        },
+        "showTitles": true,
+        "title": {
+          "qStringExpression": {
+            "qExpr": "='Daily Energy Statistical Distribution*"
+          }
+        },
+        "subtitle": "",
+        "footnote": "(*) Tukey - 1.5 Interquartile",
+        "disableNavMenu": false,
+        "showDetails": false,
+        "showDisclaimer": true,
+        "orientation": "vertical",
+        "presentation": {
+          "visibleComponents": "points_box"
+        },
+        "gridlines": {
+          "auto": true,
+          "spacing": 3
+        },
+        "dataPoint": {
+          "bubbleScales": 40,
+          "displacement": "jitter",
+          "showLabels": true,
+          "showSegmentLabels": false,
+          "showTotalLabels": true
+        },
+        "color": {
+          "point": {
+            "auto": false,
+            "mode": "byExpression",
+            "useBaseColors": "off",
+            "paletteColor": {
+              "index": 8,
+              "color": "#ffcf02"
+            },
+            "useDimColVal": true,
+            "persistent": true,
+            "expressionIsColor": true,
+            "measureScheme": "sg",
+            "reverseScheme": false,
+            "dimensionScheme": "12",
+            "autoMinMax": true,
+            "measureMin": 0,
+            "measureMax": 10,
+            "expressionLabel": "",
+            "expression": {
+              "qValueExpression": {
+                "qExpr": "if (Date = FirstSortedValue(total Date, -aggr(sum(Kwh)+rangesum(Correction), Date)), green(), if(sum(Alertes)>0, LightRed(), '#4477aa'))\r\n//\tif (Date = FirstSortedValue(Date, -aggr(total Max(aggr(avg({<Inverter={\"AAN*\"}>}Pac1), TimeBucket, Date))+Max(aggr(avg({<Inverter={\"AAR*\"}>}Pac1), TimeBucket, Date)), Date)), '#ffcf02', '#4477aa'))"
+              }
+            }
+          },
+          "formatting": {
+            "numFormatFromTemplate": true
+          },
+          "expressionLabel": "",
+          "box": {
+            "paletteColor": {
+              "index": -1,
+              "color": "#e6e6e6"
+            }
+          },
+          "useMeasureGradient": true
+        },
+        "legend": {
+          "show": true,
+          "dock": "auto",
+          "showTitle": true
+        },
+        "measureAxis": {
+          "show": "all",
+          "dock": "near",
+          "spacing": 1,
+          "autoMinMax": true,
+          "minMax": "min",
+          "min": 0,
+          "max": 10
+        },
+        "dimensionAxis": {
+          "show": "labels",
+          "label": "auto",
+          "dock": "near",
+          "continuousAuto": true,
+          "axisDisplayMode": "auto",
+          "maxVisibleItems": 21
+        },
+        "visualization": "distributionplot",
+        "sorting": {
+          "autoSort": false,
+          "elementId": "distplot-exp-max",
+          "sortCriteria": {
+            "sortByExpression": 0,
+            "sortByAscii": 1,
+            "sortByNumeric": 1,
+            "sortByLoadOrder": 1
+          },
+          "expression": {
+            "qValueExpression": {
+              "qExpr": "Max( total <[Date.autoCalendar.Month]> Aggr( sum({<Date={\"=sum(Kwh)>0\"}>}Kwh)+sum({<Date={\"=sum(Kwh)<>0\"}>}Correction), [Date.autoCalendar.Month], [=Date(Date, 'DD/MM')] ), 1 )"
+            }
+          }
+        },
+        "qLayoutExclude": {
+          "disabled": {
+            "qExtendsId": "",
+            "components": [
+              {
+                "key": "bar",
+                "style": {
+                  "width": 0.88,
+                  "strokeColor": {
+                    "index": -1,
+                    "color": "#205891"
+                  },
+                  "strokeWidth": "none"
+                }
+              }
+            ],
+            "barGrouping": {
+              "grouping": "grouped"
+            },
+            "scrollbar": "miniChart",
+            "scrollStartPos": 1,
+            "gridLine": {
+              "auto": true,
+              "spacing": 2
+            },
+            "preferContinuousAxis": false,
+            "tooltip": {
+              "auto": true,
+              "data": {
+                "qHyperCubeDef": {
+                  "qDimensions": [],
+                  "qMeasures": [],
+                  "qInterColumnSortOrder": [],
+                  "qInitialDataFetch": [],
+                  "qReductionMode": "N",
+                  "qMode": "S",
+                  "qPseudoDimPos": -1,
+                  "qNoOfLeftDims": -1,
+                  "qMaxStackedCells": 5000,
+                  "qCalcCond": {},
+                  "qTitle": {},
+                  "qCalcCondition": {
+                    "qCond": {},
+                    "qMsg": {}
+                  },
+                  "qColumnOrder": [],
+                  "qExpansionState": []
+                }
+              }
+            },
+            "showMiniChartForContinuousAxis": true,
+            "masterVersion": 0.96,
+            "metadata": {},
+            "boxplotDef": {
+              "calculations": {
+                "auto": true,
+                "mode": "stdDev",
+                "parameters": {
+                  "tukey": 1.5,
+                  "fractiles": 0.05,
+                  "stdDev": 2
+                }
+              },
+              "elements": {
+                "firstWhisker": {
+                  "name": "",
+                  "expression": null
+                },
+                "boxStart": {
+                  "name": "",
+                  "expression": null
+                },
+                "boxMiddle": {
+                  "name": "",
+                  "expression": null
+                },
+                "boxEnd": {
+                  "name": "",
+                  "expression": null
+                },
+                "lastWhisker": {
+                  "name": "",
+                  "expression": null
+                },
+                "outliers": {
+                  "include": true
+                }
+              },
+              "presentation": {
+                "whiskers": {
+                  "show": true
+                }
+              },
+              "color": {
+                "auto": true,
+                "mode": "primary",
+                "box": {
+                  "paletteColor": {
+                    "index": -1,
+                    "color": "#e6e6e6"
+                  }
+                },
+                "point": {
+                  "paletteColor": {
+                    "index": 6,
+                    "color": "#4477aa"
+                  }
+                },
+                "expressionIsColor": true
+              },
+              "sorting": {
+                "autoSort": false,
+                "elementId": "boxMiddle",
+                "sortCriteria": {
+                  "sortByExpression": 0,
+                  "sortByAscii": 1,
+                  "sortByNumeric": 1,
+                  "sortByLoadOrder": 1
+                },
+                "expression": {
+                  "qValueExpression": {
+                    "qExpr": "Median( total <[Date.autoCalendar.Month]> Aggr( Sum(Kwh)+rangesum(Correction), [Date.autoCalendar.Month], [=Date(Date, 'DD/MM')] )  )"
+                  }
+                }
+              }
+            },
+            "qUndoExclude": {
+              "hashCode": -1871317574,
+              "box": {
+                "qHyperCubeDef": {
+                  "qDimensions": [
+                    {
+                      "qDef": {
+                        "qGrouping": "N",
+                        "qFieldDefs": [
+                          "Date.autoCalendar.Month"
+                        ],
+                        "qFieldLabels": [
+                          "Date.Month"
+                        ],
+                        "qSortCriterias": [
+                          {
+                            "qSortByNumeric": 1,
+                            "qSortByAscii": 1,
+                            "qSortByLoadOrder": 1,
+                            "qExpression": {}
+                          }
+                        ],
+                        "qNumberPresentations": [],
+                        "qActiveField": 0,
+                        "autoSort": true,
+                        "cId": "evHysPL",
+                        "othersLabel": "Others"
+                      },
+                      "qNullSuppression": true,
+                      "qOtherTotalSpec": {
+                        "qOtherMode": "OTHER_OFF",
+                        "qOtherCounted": {
+                          "qv": "10"
+                        },
+                        "qOtherLimit": {
+                          "qv": "0"
+                        },
+                        "qOtherLimitMode": "OTHER_GE_LIMIT",
+                        "qSuppressOther": true,
+                        "qForceBadValueKeeping": true,
+                        "qApplyEvenWhenPossiblyWrongResult": true,
+                        "qOtherSortMode": "OTHER_SORT_DESCENDING",
+                        "qTotalMode": "TOTAL_OFF",
+                        "qReferencedExpression": {}
+                      },
+                      "qOtherLabel": {
+                        "qv": "Others"
+                      },
+                      "qTotalLabel": {},
+                      "qCalcCond": {},
+                      "qAttributeExpressions": [],
+                      "qAttributeDimensions": [],
+                      "qCalcCondition": {
+                        "qCond": {},
+                        "qMsg": {}
+                      }
+                    }
+                  ],
+                  "qMeasures": [
+                    {
+                      "qDef": {
+                        "qLabel": "First whisker",
+                        "qTags": [],
+                        "qGrouping": "N",
+                        "qDef": "Rangemax(Avg( total <[Date.autoCalendar.Month]> Aggr( sum({<Date={\"=sum(Kwh)>0\"}>}Kwh)+sum({<Date={\"=sum(Kwh)<>0\"}>}Correction), [Date.autoCalendar.Month], [=Date(Date, 'DD/MM')] )  ) - 2 *(Stdev( total <[Date.autoCalendar.Month]> Aggr( sum({<Date={\"=sum(Kwh)>0\"}>}Kwh)+sum({<Date={\"=sum(Kwh)<>0\"}>}Correction), [Date.autoCalendar.Month], [=Date(Date, 'DD/MM')] )  ) ), Min( total <[Date.autoCalendar.Month]> Aggr( sum({<Date={\"=sum(Kwh)>0\"}>}Kwh)+sum({<Date={\"=sum(Kwh)<>0\"}>}Correction), [Date.autoCalendar.Month], [=Date(Date, 'DD/MM')] )  ))",
+                        "qNumFormat": {
+                          "qType": "U",
+                          "qnDec": 10,
+                          "qUseThou": 0
+                        },
+                        "qAccumulate": 0,
+                        "qActiveExpression": 0,
+                        "qExpressions": [],
+                        "cId": "egtjbjr"
+                      },
+                      "qSortBy": {
+                        "qExpression": {}
+                      },
+                      "qAttributeExpressions": [
+                        {
+                          "qExpression": "=if(Avg( total <[Date.autoCalendar.Month]> Aggr( sum({<Date={\"=sum(Kwh)>0\"}>}Kwh)+sum({<Date={\"=sum(Kwh)<>0\"}>}Correction), [Date.autoCalendar.Month], [=Date(Date, 'DD/MM')] )  ) - 2 *(Stdev( total <[Date.autoCalendar.Month]> Aggr( sum({<Date={\"=sum(Kwh)>0\"}>}Kwh)+sum({<Date={\"=sum(Kwh)<>0\"}>}Correction), [Date.autoCalendar.Month], [=Date(Date, 'DD/MM')] )  ) ) < Min( total <[Date.autoCalendar.Month]> Aggr( sum({<Date={\"=sum(Kwh)>0\"}>}Kwh)+sum({<Date={\"=sum(Kwh)<>0\"}>}Correction), [Date.autoCalendar.Month], [=Date(Date, 'DD/MM')] )  ), 'Minimum', 'Box middle - 2 standard deviations' )",
+                          "qAttribute": true,
+                          "qNumFormat": {
+                            "qType": "U",
+                            "qnDec": 10,
+                            "qUseThou": 0
+                          },
+                          "id": "tooltip"
+                        }
+                      ],
+                      "qAttributeDimensions": [],
+                      "qCalcCond": {},
+                      "qCalcCondition": {
+                        "qCond": {},
+                        "qMsg": {}
+                      },
+                      "qTrendLines": [],
+                      "qMiniChartDef": {
+                        "qSortBy": {
+                          "qExpression": {}
+                        },
+                        "qOtherTotalSpec": {
+                          "qOtherMode": "OTHER_OFF",
+                          "qOtherCounted": {},
+                          "qOtherLimit": {},
+                          "qOtherLimitMode": "OTHER_GT_LIMIT",
+                          "qForceBadValueKeeping": true,
+                          "qApplyEvenWhenPossiblyWrongResult": true,
+                          "qOtherSortMode": "OTHER_SORT_DESCENDING",
+                          "qTotalMode": "TOTAL_OFF",
+                          "qReferencedExpression": {}
+                        },
+                        "qMaxNumberPoints": -1,
+                        "qAttributeExpressions": []
+                      },
+                      "boxElement": "firstWhisker"
+                    },
+                    {
+                      "qDef": {
+                        "qLabel": "Box start",
+                        "qTags": [],
+                        "qGrouping": "N",
+                        "qDef": "Rangemax(Avg( total <[Date.autoCalendar.Month]> Aggr( sum({<Date={\"=sum(Kwh)>0\"}>}Kwh)+sum({<Date={\"=sum(Kwh)<>0\"}>}Correction), [Date.autoCalendar.Month], [=Date(Date, 'DD/MM')] )  ) - Stdev( total <[Date.autoCalendar.Month]> Aggr( sum({<Date={\"=sum(Kwh)>0\"}>}Kwh)+sum({<Date={\"=sum(Kwh)<>0\"}>}Correction), [Date.autoCalendar.Month], [=Date(Date, 'DD/MM')] )  ) , Min( total <[Date.autoCalendar.Month]> Aggr( sum({<Date={\"=sum(Kwh)>0\"}>}Kwh)+sum({<Date={\"=sum(Kwh)<>0\"}>}Correction), [Date.autoCalendar.Month], [=Date(Date, 'DD/MM')] )  ))",
+                        "qNumFormat": {
+                          "qType": "U",
+                          "qnDec": 10,
+                          "qUseThou": 0
+                        },
+                        "qAccumulate": 0,
+                        "qActiveExpression": 0,
+                        "qExpressions": [],
+                        "cId": "AdDjjLb"
+                      },
+                      "qSortBy": {
+                        "qExpression": {}
+                      },
+                      "qAttributeExpressions": [
+                        {
+                          "qExpression": "=if(Avg( total <[Date.autoCalendar.Month]> Aggr( sum({<Date={\"=sum(Kwh)>0\"}>}Kwh)+sum({<Date={\"=sum(Kwh)<>0\"}>}Correction), [Date.autoCalendar.Month], [=Date(Date, 'DD/MM')] )  ) - Stdev( total <[Date.autoCalendar.Month]> Aggr( sum({<Date={\"=sum(Kwh)>0\"}>}Kwh)+sum({<Date={\"=sum(Kwh)<>0\"}>}Correction), [Date.autoCalendar.Month], [=Date(Date, 'DD/MM')] )  )  < Min( total <[Date.autoCalendar.Month]> Aggr( sum({<Date={\"=sum(Kwh)>0\"}>}Kwh)+sum({<Date={\"=sum(Kwh)<>0\"}>}Correction), [Date.autoCalendar.Month], [=Date(Date, 'DD/MM')] )  ), 'Minimum', 'Box middle - 1 standard deviation' )",
+                          "qAttribute": true,
+                          "qNumFormat": {
+                            "qType": "U",
+                            "qnDec": 10,
+                            "qUseThou": 0
+                          },
+                          "id": "tooltip"
+                        }
+                      ],
+                      "qAttributeDimensions": [],
+                      "qCalcCond": {},
+                      "qCalcCondition": {
+                        "qCond": {},
+                        "qMsg": {}
+                      },
+                      "qTrendLines": [],
+                      "qMiniChartDef": {
+                        "qSortBy": {
+                          "qExpression": {}
+                        },
+                        "qOtherTotalSpec": {
+                          "qOtherMode": "OTHER_OFF",
+                          "qOtherCounted": {},
+                          "qOtherLimit": {},
+                          "qOtherLimitMode": "OTHER_GT_LIMIT",
+                          "qForceBadValueKeeping": true,
+                          "qApplyEvenWhenPossiblyWrongResult": true,
+                          "qOtherSortMode": "OTHER_SORT_DESCENDING",
+                          "qTotalMode": "TOTAL_OFF",
+                          "qReferencedExpression": {}
+                        },
+                        "qMaxNumberPoints": -1,
+                        "qAttributeExpressions": []
+                      },
+                      "boxElement": "boxStart"
+                    },
+                    {
+                      "qDef": {
+                        "qLabel": "Center line",
+                        "qTags": [],
+                        "qGrouping": "N",
+                        "qDef": "Avg( total <[Date.autoCalendar.Month]> Aggr( sum({<Date={\"=sum(Kwh)>0\"}>}Kwh)+sum({<Date={\"=sum(Kwh)<>0\"}>}Correction), [Date.autoCalendar.Month], [=Date(Date, 'DD/MM')] )  )",
+                        "qNumFormat": {
+                          "qType": "U",
+                          "qnDec": 10,
+                          "qUseThou": 0
+                        },
+                        "qAccumulate": 0,
+                        "qActiveExpression": 0,
+                        "qExpressions": [],
+                        "cId": "SSZNu"
+                      },
+                      "qSortBy": {
+                        "qExpression": {}
+                      },
+                      "qAttributeExpressions": [
+                        {
+                          "qExpression": "='Average'",
+                          "qAttribute": true,
+                          "qNumFormat": {
+                            "qType": "U",
+                            "qnDec": 10,
+                            "qUseThou": 0
+                          },
+                          "id": "tooltip"
+                        }
+                      ],
+                      "qAttributeDimensions": [],
+                      "qCalcCond": {},
+                      "qCalcCondition": {
+                        "qCond": {},
+                        "qMsg": {}
+                      },
+                      "qTrendLines": [],
+                      "qMiniChartDef": {
+                        "qSortBy": {
+                          "qExpression": {}
+                        },
+                        "qOtherTotalSpec": {
+                          "qOtherMode": "OTHER_OFF",
+                          "qOtherCounted": {},
+                          "qOtherLimit": {},
+                          "qOtherLimitMode": "OTHER_GT_LIMIT",
+                          "qForceBadValueKeeping": true,
+                          "qApplyEvenWhenPossiblyWrongResult": true,
+                          "qOtherSortMode": "OTHER_SORT_DESCENDING",
+                          "qTotalMode": "TOTAL_OFF",
+                          "qReferencedExpression": {}
+                        },
+                        "qMaxNumberPoints": -1,
+                        "qAttributeExpressions": []
+                      },
+                      "boxElement": "boxMiddle"
+                    },
+                    {
+                      "qDef": {
+                        "qLabel": "Box end",
+                        "qTags": [],
+                        "qGrouping": "N",
+                        "qDef": "Rangemin(Avg( total <[Date.autoCalendar.Month]> Aggr( sum({<Date={\"=sum(Kwh)>0\"}>}Kwh)+sum({<Date={\"=sum(Kwh)<>0\"}>}Correction), [Date.autoCalendar.Month], [=Date(Date, 'DD/MM')] )  ) + Stdev( total <[Date.autoCalendar.Month]> Aggr( sum({<Date={\"=sum(Kwh)>0\"}>}Kwh)+sum({<Date={\"=sum(Kwh)<>0\"}>}Correction), [Date.autoCalendar.Month], [=Date(Date, 'DD/MM')] )  ) , Max( total <[Date.autoCalendar.Month]> Aggr( sum({<Date={\"=sum(Kwh)>0\"}>}Kwh)+sum({<Date={\"=sum(Kwh)<>0\"}>}Correction), [Date.autoCalendar.Month], [=Date(Date, 'DD/MM')] )  ))",
+                        "qNumFormat": {
+                          "qType": "U",
+                          "qnDec": 10,
+                          "qUseThou": 0
+                        },
+                        "qAccumulate": 0,
+                        "qActiveExpression": 0,
+                        "qExpressions": [],
+                        "cId": "kPMjyu"
+                      },
+                      "qSortBy": {
+                        "qExpression": {}
+                      },
+                      "qAttributeExpressions": [
+                        {
+                          "qExpression": "=if(Avg( total <[Date.autoCalendar.Month]> Aggr( sum({<Date={\"=sum(Kwh)>0\"}>}Kwh)+sum({<Date={\"=sum(Kwh)<>0\"}>}Correction), [Date.autoCalendar.Month], [=Date(Date, 'DD/MM')] )  ) + Stdev( total <[Date.autoCalendar.Month]> Aggr( sum({<Date={\"=sum(Kwh)>0\"}>}Kwh)+sum({<Date={\"=sum(Kwh)<>0\"}>}Correction), [Date.autoCalendar.Month], [=Date(Date, 'DD/MM')] )  )  > Max( total <[Date.autoCalendar.Month]> Aggr( sum({<Date={\"=sum(Kwh)>0\"}>}Kwh)+sum({<Date={\"=sum(Kwh)<>0\"}>}Correction), [Date.autoCalendar.Month], [=Date(Date, 'DD/MM')] )  ), 'Maximum', 'Box middle + 1 standard deviation' )",
+                          "qAttribute": true,
+                          "qNumFormat": {
+                            "qType": "U",
+                            "qnDec": 10,
+                            "qUseThou": 0
+                          },
+                          "id": "tooltip"
+                        }
+                      ],
+                      "qAttributeDimensions": [],
+                      "qCalcCond": {},
+                      "qCalcCondition": {
+                        "qCond": {},
+                        "qMsg": {}
+                      },
+                      "qTrendLines": [],
+                      "qMiniChartDef": {
+                        "qSortBy": {
+                          "qExpression": {}
+                        },
+                        "qOtherTotalSpec": {
+                          "qOtherMode": "OTHER_OFF",
+                          "qOtherCounted": {},
+                          "qOtherLimit": {},
+                          "qOtherLimitMode": "OTHER_GT_LIMIT",
+                          "qForceBadValueKeeping": true,
+                          "qApplyEvenWhenPossiblyWrongResult": true,
+                          "qOtherSortMode": "OTHER_SORT_DESCENDING",
+                          "qTotalMode": "TOTAL_OFF",
+                          "qReferencedExpression": {}
+                        },
+                        "qMaxNumberPoints": -1,
+                        "qAttributeExpressions": []
+                      },
+                      "boxElement": "boxEnd"
+                    },
+                    {
+                      "qDef": {
+                        "qLabel": "Last whisker",
+                        "qTags": [],
+                        "qGrouping": "N",
+                        "qDef": "Rangemin(Avg( total <[Date.autoCalendar.Month]> Aggr( sum({<Date={\"=sum(Kwh)>0\"}>}Kwh)+sum({<Date={\"=sum(Kwh)<>0\"}>}Correction), [Date.autoCalendar.Month], [=Date(Date, 'DD/MM')] )  ) + 2 *(Stdev( total <[Date.autoCalendar.Month]> Aggr( sum({<Date={\"=sum(Kwh)>0\"}>}Kwh)+sum({<Date={\"=sum(Kwh)<>0\"}>}Correction), [Date.autoCalendar.Month], [=Date(Date, 'DD/MM')] )  ) ), Max( total <[Date.autoCalendar.Month]> Aggr( sum({<Date={\"=sum(Kwh)>0\"}>}Kwh)+sum({<Date={\"=sum(Kwh)<>0\"}>}Correction), [Date.autoCalendar.Month], [=Date(Date, 'DD/MM')] )  ))",
+                        "qNumFormat": {
+                          "qType": "U",
+                          "qnDec": 10,
+                          "qUseThou": 0
+                        },
+                        "qAccumulate": 0,
+                        "qActiveExpression": 0,
+                        "qExpressions": [],
+                        "cId": "rTsMrhJ"
+                      },
+                      "qSortBy": {
+                        "qExpression": {}
+                      },
+                      "qAttributeExpressions": [
+                        {
+                          "qExpression": "=if(Avg( total <[Date.autoCalendar.Month]> Aggr( sum({<Date={\"=sum(Kwh)>0\"}>}Kwh)+sum({<Date={\"=sum(Kwh)<>0\"}>}Correction), [Date.autoCalendar.Month], [=Date(Date, 'DD/MM')] )  ) + 2 *(Stdev( total <[Date.autoCalendar.Month]> Aggr( sum({<Date={\"=sum(Kwh)>0\"}>}Kwh)+sum({<Date={\"=sum(Kwh)<>0\"}>}Correction), [Date.autoCalendar.Month], [=Date(Date, 'DD/MM')] )  ) ) > Max( total <[Date.autoCalendar.Month]> Aggr( sum({<Date={\"=sum(Kwh)>0\"}>}Kwh)+sum({<Date={\"=sum(Kwh)<>0\"}>}Correction), [Date.autoCalendar.Month], [=Date(Date, 'DD/MM')] )  ), 'Maximum', 'Box middle + 2 standard deviations' )",
+                          "qAttribute": true,
+                          "qNumFormat": {
+                            "qType": "U",
+                            "qnDec": 10,
+                            "qUseThou": 0
+                          },
+                          "id": "tooltip"
+                        }
+                      ],
+                      "qAttributeDimensions": [],
+                      "qCalcCond": {},
+                      "qCalcCondition": {
+                        "qCond": {},
+                        "qMsg": {}
+                      },
+                      "qTrendLines": [],
+                      "qMiniChartDef": {
+                        "qSortBy": {
+                          "qExpression": {}
+                        },
+                        "qOtherTotalSpec": {
+                          "qOtherMode": "OTHER_OFF",
+                          "qOtherCounted": {},
+                          "qOtherLimit": {},
+                          "qOtherLimitMode": "OTHER_GT_LIMIT",
+                          "qForceBadValueKeeping": true,
+                          "qApplyEvenWhenPossiblyWrongResult": true,
+                          "qOtherSortMode": "OTHER_SORT_DESCENDING",
+                          "qTotalMode": "TOTAL_OFF",
+                          "qReferencedExpression": {}
+                        },
+                        "qMaxNumberPoints": -1,
+                        "qAttributeExpressions": []
+                      },
+                      "boxElement": "lastWhisker"
+                    }
+                  ],
+                  "qInterColumnSortOrder": [],
+                  "qInitialDataFetch": [],
+                  "qReductionMode": "N",
+                  "qMode": "S",
+                  "qPseudoDimPos": -1,
+                  "qNoOfLeftDims": -1,
+                  "qMaxStackedCells": 5000,
+                  "qCalcCond": {},
+                  "qTitle": {},
+                  "qCalcCondition": {
+                    "qCond": {},
+                    "qMsg": {}
+                  },
+                  "qColumnOrder": [],
+                  "qExpansionState": []
+                }
+              },
+              "outliers": {
+                "qHyperCubeDef": {
+                  "qDimensions": [
+                    {
+                      "qDef": {
+                        "qGrouping": "N",
+                        "qFieldDefs": [
+                          "=aggr( If( sum({<Date={\"=sum(Kwh)>0\"}>}Kwh)+sum({<Date={\"=sum(Kwh)<>0\"}>}Correction) < Rangemax(Avg( total <[Date.autoCalendar.Month]> Aggr( sum({<Date={\"=sum(Kwh)>0\"}>}Kwh)+sum({<Date={\"=sum(Kwh)<>0\"}>}Correction), [Date.autoCalendar.Month], [=Date(Date, 'DD/MM')] )  ) - 2 *(Stdev( total <[Date.autoCalendar.Month]> Aggr( sum({<Date={\"=sum(Kwh)>0\"}>}Kwh)+sum({<Date={\"=sum(Kwh)<>0\"}>}Correction), [Date.autoCalendar.Month], [=Date(Date, 'DD/MM')] )  ) ), Min( total <[Date.autoCalendar.Month]> Aggr( sum({<Date={\"=sum(Kwh)>0\"}>}Kwh)+sum({<Date={\"=sum(Kwh)<>0\"}>}Correction), [Date.autoCalendar.Month], [=Date(Date, 'DD/MM')] )  )) or sum({<Date={\"=sum(Kwh)>0\"}>}Kwh)+sum({<Date={\"=sum(Kwh)<>0\"}>}Correction) > Rangemin(Avg( total <[Date.autoCalendar.Month]> Aggr( sum({<Date={\"=sum(Kwh)>0\"}>}Kwh)+sum({<Date={\"=sum(Kwh)<>0\"}>}Correction), [Date.autoCalendar.Month], [=Date(Date, 'DD/MM')] )  ) + 2 *(Stdev( total <[Date.autoCalendar.Month]> Aggr( sum({<Date={\"=sum(Kwh)>0\"}>}Kwh)+sum({<Date={\"=sum(Kwh)<>0\"}>}Correction), [Date.autoCalendar.Month], [=Date(Date, 'DD/MM')] )  ) ), Max( total <[Date.autoCalendar.Month]> Aggr( sum({<Date={\"=sum(Kwh)>0\"}>}Kwh)+sum({<Date={\"=sum(Kwh)<>0\"}>}Correction), [Date.autoCalendar.Month], [=Date(Date, 'DD/MM')] )  )) or Alt( Aggr( RowNo(), [Date.autoCalendar.Month], [=Date(Date, 'DD/MM')] ), 1 ) = 1, [Date.autoCalendar.Month] & [=Date(Date, 'DD/MM')] ), [=Date(Date, 'DD/MM')], [Date.autoCalendar.Month] )"
+                        ],
+                        "qFieldLabels": [
+                          ""
+                        ],
+                        "qSortCriterias": [
+                          {
+                            "qSortByNumeric": 1,
+                            "qSortByAscii": 1,
+                            "qSortByLoadOrder": 1,
+                            "qSortByExpression": 1,
+                            "qExpression": {
+                              "qv": "=aggr( If( sum({<Date={\"=sum(Kwh)>0\"}>}Kwh)+sum({<Date={\"=sum(Kwh)<>0\"}>}Correction) < Rangemax(Avg( total <[Date.autoCalendar.Month]> Aggr( sum({<Date={\"=sum(Kwh)>0\"}>}Kwh)+sum({<Date={\"=sum(Kwh)<>0\"}>}Correction), [Date.autoCalendar.Month], [=Date(Date, 'DD/MM')] )  ) - 2 *(Stdev( total <[Date.autoCalendar.Month]> Aggr( sum({<Date={\"=sum(Kwh)>0\"}>}Kwh)+sum({<Date={\"=sum(Kwh)<>0\"}>}Correction), [Date.autoCalendar.Month], [=Date(Date, 'DD/MM')] )  ) ), Min( total <[Date.autoCalendar.Month]> Aggr( sum({<Date={\"=sum(Kwh)>0\"}>}Kwh)+sum({<Date={\"=sum(Kwh)<>0\"}>}Correction), [Date.autoCalendar.Month], [=Date(Date, 'DD/MM')] )  )), Rangemax(Avg( total <[Date.autoCalendar.Month]> Aggr( sum({<Date={\"=sum(Kwh)>0\"}>}Kwh)+sum({<Date={\"=sum(Kwh)<>0\"}>}Correction), [Date.autoCalendar.Month], [=Date(Date, 'DD/MM')] )  ) - 2 *(Stdev( total <[Date.autoCalendar.Month]> Aggr( sum({<Date={\"=sum(Kwh)>0\"}>}Kwh)+sum({<Date={\"=sum(Kwh)<>0\"}>}Correction), [Date.autoCalendar.Month], [=Date(Date, 'DD/MM')] )  ) ), Min( total <[Date.autoCalendar.Month]> Aggr( sum({<Date={\"=sum(Kwh)>0\"}>}Kwh)+sum({<Date={\"=sum(Kwh)<>0\"}>}Correction), [Date.autoCalendar.Month], [=Date(Date, 'DD/MM')] )  )) - sum({<Date={\"=sum(Kwh)>0\"}>}Kwh)+sum({<Date={\"=sum(Kwh)<>0\"}>}Correction), sum({<Date={\"=sum(Kwh)>0\"}>}Kwh)+sum({<Date={\"=sum(Kwh)<>0\"}>}Correction) - Rangemin(Avg( total <[Date.autoCalendar.Month]> Aggr( sum({<Date={\"=sum(Kwh)>0\"}>}Kwh)+sum({<Date={\"=sum(Kwh)<>0\"}>}Correction), [Date.autoCalendar.Month], [=Date(Date, 'DD/MM')] )  ) + 2 *(Stdev( total <[Date.autoCalendar.Month]> Aggr( sum({<Date={\"=sum(Kwh)>0\"}>}Kwh)+sum({<Date={\"=sum(Kwh)<>0\"}>}Correction), [Date.autoCalendar.Month], [=Date(Date, 'DD/MM')] )  ) ), Max( total <[Date.autoCalendar.Month]> Aggr( sum({<Date={\"=sum(Kwh)>0\"}>}Kwh)+sum({<Date={\"=sum(Kwh)<>0\"}>}Correction), [Date.autoCalendar.Month], [=Date(Date, 'DD/MM')] )  )) ), [=Date(Date, 'DD/MM')], [Date.autoCalendar.Month] )"
+                            }
+                          }
+                        ],
+                        "qNumberPresentations": [],
+                        "qActiveField": 0,
+                        "autoSort": true,
+                        "cId": "ECWkzE",
+                        "othersLabel": "Others"
+                      },
+                      "qNullSuppression": true,
+                      "qOtherTotalSpec": {
+                        "qOtherMode": "OTHER_OFF",
+                        "qOtherCounted": {
+                          "qv": "10"
+                        },
+                        "qOtherLimit": {
+                          "qv": "0"
+                        },
+                        "qOtherLimitMode": "OTHER_GE_LIMIT",
+                        "qSuppressOther": true,
+                        "qForceBadValueKeeping": true,
+                        "qApplyEvenWhenPossiblyWrongResult": true,
+                        "qOtherSortMode": "OTHER_SORT_DESCENDING",
+                        "qTotalMode": "TOTAL_OFF",
+                        "qReferencedExpression": {}
+                      },
+                      "qOtherLabel": {
+                        "qv": "Others"
+                      },
+                      "qTotalLabel": {},
+                      "qCalcCond": {},
+                      "qAttributeExpressions": [],
+                      "qAttributeDimensions": [],
+                      "qCalcCondition": {
+                        "qCond": {},
+                        "qMsg": {}
+                      }
+                    },
+                    {
+                      "qDef": {
+                        "qGrouping": "N",
+                        "qFieldDefs": [
+                          "Date.autoCalendar.Month"
+                        ],
+                        "qFieldLabels": [
+                          "Date.Month"
+                        ],
+                        "qSortCriterias": [
+                          {
+                            "qSortByNumeric": 1,
+                            "qSortByAscii": 1,
+                            "qSortByLoadOrder": 1,
+                            "qExpression": {}
+                          }
+                        ],
+                        "qNumberPresentations": [],
+                        "qActiveField": 0,
+                        "autoSort": true,
+                        "cId": "evHysPL",
+                        "othersLabel": "Others"
+                      },
+                      "qNullSuppression": true,
+                      "qOtherTotalSpec": {
+                        "qOtherMode": "OTHER_OFF",
+                        "qOtherCounted": {
+                          "qv": "10"
+                        },
+                        "qOtherLimit": {
+                          "qv": "0"
+                        },
+                        "qOtherLimitMode": "OTHER_GE_LIMIT",
+                        "qSuppressOther": true,
+                        "qForceBadValueKeeping": true,
+                        "qApplyEvenWhenPossiblyWrongResult": true,
+                        "qOtherSortMode": "OTHER_SORT_DESCENDING",
+                        "qTotalMode": "TOTAL_OFF",
+                        "qReferencedExpression": {}
+                      },
+                      "qOtherLabel": {
+                        "qv": "Others"
+                      },
+                      "qTotalLabel": {},
+                      "qCalcCond": {},
+                      "qAttributeExpressions": [],
+                      "qAttributeDimensions": [],
+                      "qCalcCondition": {
+                        "qCond": {},
+                        "qMsg": {}
+                      }
+                    },
+                    {
+                      "qDef": {
+                        "qGrouping": "N",
+                        "qFieldDefs": [
+                          "=Date(Date, 'DD/MM')"
+                        ],
+                        "qFieldLabels": [
+                          "Date"
+                        ],
+                        "qSortCriterias": [
+                          {
+                            "qSortByNumeric": 1,
+                            "qSortByAscii": 1,
+                            "qSortByLoadOrder": 1,
+                            "qExpression": {}
+                          }
+                        ],
+                        "qNumberPresentations": [],
+                        "qActiveField": 0,
+                        "autoSort": true,
+                        "cId": "FExMJEG",
+                        "othersLabel": "Others"
+                      },
+                      "qOtherTotalSpec": {
+                        "qOtherMode": "OTHER_OFF",
+                        "qOtherCounted": {
+                          "qv": "10"
+                        },
+                        "qOtherLimit": {
+                          "qv": "0"
+                        },
+                        "qOtherLimitMode": "OTHER_GE_LIMIT",
+                        "qForceBadValueKeeping": true,
+                        "qApplyEvenWhenPossiblyWrongResult": true,
+                        "qOtherSortMode": "OTHER_SORT_DESCENDING",
+                        "qTotalMode": "TOTAL_OFF",
+                        "qReferencedExpression": {}
+                      },
+                      "qOtherLabel": {
+                        "qv": "Others"
+                      },
+                      "qTotalLabel": {},
+                      "qCalcCond": {},
+                      "qAttributeExpressions": [],
+                      "qAttributeDimensions": [],
+                      "qCalcCondition": {
+                        "qCond": {},
+                        "qMsg": {}
+                      },
+                      "showTitles": true,
+                      "title": "",
+                      "subtitle": "",
+                      "footnote": "",
+                      "showDetails": false,
+                      "qStateName": "",
+                      "othersLabel": "Others"
+                    }
+                  ],
+                  "qMeasures": [
+                    {
+                      "qDef": {
+                        "qLabel": "Daily Energy (kWh)",
+                        "qTags": [],
+                        "qGrouping": "N",
+                        "qDef": "=aggr( If( sum({<Date={\"=sum(Kwh)>0\"}>}Kwh)+sum({<Date={\"=sum(Kwh)<>0\"}>}Correction) < Rangemax(Avg( total <[Date.autoCalendar.Month]> Aggr( sum({<Date={\"=sum(Kwh)>0\"}>}Kwh)+sum({<Date={\"=sum(Kwh)<>0\"}>}Correction), [Date.autoCalendar.Month], [=Date(Date, 'DD/MM')] )  ) - 2 *(Stdev( total <[Date.autoCalendar.Month]> Aggr( sum({<Date={\"=sum(Kwh)>0\"}>}Kwh)+sum({<Date={\"=sum(Kwh)<>0\"}>}Correction), [Date.autoCalendar.Month], [=Date(Date, 'DD/MM')] )  ) ), Min( total <[Date.autoCalendar.Month]> Aggr( sum({<Date={\"=sum(Kwh)>0\"}>}Kwh)+sum({<Date={\"=sum(Kwh)<>0\"}>}Correction), [Date.autoCalendar.Month], [=Date(Date, 'DD/MM')] )  )) or sum({<Date={\"=sum(Kwh)>0\"}>}Kwh)+sum({<Date={\"=sum(Kwh)<>0\"}>}Correction) > Rangemin(Avg( total <[Date.autoCalendar.Month]> Aggr( sum({<Date={\"=sum(Kwh)>0\"}>}Kwh)+sum({<Date={\"=sum(Kwh)<>0\"}>}Correction), [Date.autoCalendar.Month], [=Date(Date, 'DD/MM')] )  ) + 2 *(Stdev( total <[Date.autoCalendar.Month]> Aggr( sum({<Date={\"=sum(Kwh)>0\"}>}Kwh)+sum({<Date={\"=sum(Kwh)<>0\"}>}Correction), [Date.autoCalendar.Month], [=Date(Date, 'DD/MM')] )  ) ), Max( total <[Date.autoCalendar.Month]> Aggr( sum({<Date={\"=sum(Kwh)>0\"}>}Kwh)+sum({<Date={\"=sum(Kwh)<>0\"}>}Correction), [Date.autoCalendar.Month], [=Date(Date, 'DD/MM')] )  )), sum({<Date={\"=sum(Kwh)>0\"}>}Kwh)+sum({<Date={\"=sum(Kwh)<>0\"}>}Correction) ), [=Date(Date, 'DD/MM')], [Date.autoCalendar.Month] )",
+                        "qNumFormat": {
+                          "qType": "U",
+                          "qnDec": 10,
+                          "qUseThou": 0
+                        },
+                        "qAccumulate": 0,
+                        "qActiveExpression": 0,
+                        "qExpressions": [],
+                        "autoSort": true,
+                        "cId": "Ddb",
+                        "numFormatFromTemplate": true
+                      },
+                      "qSortBy": {
+                        "qSortByNumeric": -1,
+                        "qSortByLoadOrder": 1,
+                        "qExpression": {}
+                      },
+                      "qAttributeExpressions": [],
+                      "qAttributeDimensions": [],
+                      "qCalcCond": {},
+                      "qCalcCondition": {
+                        "qCond": {},
+                        "qMsg": {}
+                      },
+                      "qTrendLines": [
+                        {
+                          "qType": "AVERAGE",
+                          "qXColIx": 0,
+                          "qContinuousXAxis": "Never",
+                          "qMultiDimMode": "Sum",
+                          "label": "Avg",
+                          "style": {
+                            "autoColor": true,
+                            "paletteColor": {
+                              "color": "#f93f17",
+                              "index": 9
+                            },
+                            "dashed": true,
+                            "lineDash": "8, 4"
+                          },
+                          "cId": "SyKT"
+                        }
+                      ],
+                      "qMiniChartDef": {
+                        "qSortBy": {
+                          "qExpression": {}
+                        },
+                        "qOtherTotalSpec": {
+                          "qOtherMode": "OTHER_OFF",
+                          "qOtherCounted": {},
+                          "qOtherLimit": {},
+                          "qOtherLimitMode": "OTHER_GT_LIMIT",
+                          "qForceBadValueKeeping": true,
+                          "qApplyEvenWhenPossiblyWrongResult": true,
+                          "qOtherSortMode": "OTHER_SORT_DESCENDING",
+                          "qTotalMode": "TOTAL_OFF",
+                          "qReferencedExpression": {}
+                        },
+                        "qMaxNumberPoints": -1,
+                        "qAttributeExpressions": []
+                      },
+                      "showTitles": true,
+                      "title": "",
+                      "subtitle": "",
+                      "footnote": "",
+                      "showDetails": false,
+                      "qStateName": ""
+                    }
+                  ],
+                  "qInterColumnSortOrder": [
+                    1,
+                    0,
+                    3,
+                    2
+                  ],
+                  "qInitialDataFetch": [],
+                  "qReductionMode": "N",
+                  "qMode": "K",
+                  "qPseudoDimPos": -1,
+                  "qNoOfLeftDims": -1,
+                  "qAlwaysFullyExpanded": true,
+                  "qMaxStackedCells": 5000,
+                  "qCalcCond": {},
+                  "qTitle": {},
+                  "qCalcCondition": {
+                    "qCond": {},
+                    "qMsg": {}
+                  },
+                  "qColumnOrder": [],
+                  "qExpansionState": []
+                }
+              }
+            }
+          },
+          "quarantine": {},
+          "changed": {
+            "color.persistent": {
+              "from": false,
+              "to": true
+            }
+          }
+        },
+        "qUndoExclude": {
+          "hashCode": 1687511532,
+          "qHyperCubeDef": {
+            "qDimensions": [
+              {
+                "qDef": {
+                  "qGrouping": "N",
+                  "qFieldDefs": [
+                    "Date.autoCalendar.Month"
+                  ],
+                  "qFieldLabels": [
+                    "Date.Month"
+                  ],
+                  "qSortCriterias": [
+                    {
+                      "qSortByNumeric": 1,
+                      "qSortByAscii": 1,
+                      "qSortByLoadOrder": 1,
+                      "qExpression": {}
+                    }
+                  ],
+                  "qNumberPresentations": [],
+                  "qActiveField": 0,
+                  "autoSort": true,
+                  "cId": "evHysPL",
+                  "othersLabel": "Others"
+                },
+                "qNullSuppression": true,
+                "qOtherTotalSpec": {
+                  "qOtherMode": "OTHER_OFF",
+                  "qOtherCounted": {
+                    "qv": "10"
+                  },
+                  "qOtherLimit": {
+                    "qv": "0"
+                  },
+                  "qOtherLimitMode": "OTHER_GE_LIMIT",
+                  "qSuppressOther": true,
+                  "qForceBadValueKeeping": true,
+                  "qApplyEvenWhenPossiblyWrongResult": true,
+                  "qOtherSortMode": "OTHER_SORT_DESCENDING",
+                  "qTotalMode": "TOTAL_OFF",
+                  "qReferencedExpression": {}
+                },
+                "qOtherLabel": {
+                  "qv": "Others"
+                },
+                "qTotalLabel": {},
+                "qCalcCond": {},
+                "qAttributeExpressions": [
+                  {
+                    "qExpression": "Min( total <[Date.autoCalendar.Month]> Aggr( sum({<Date={\"=sum(Kwh)>0\"}>}Kwh)+sum({<Date={\"=sum(Kwh)<>0\"}>}Correction), [Date.autoCalendar.Month], [=Date(Date, 'DD/MM')] ), 0 )",
+                    "id": "minBoxValue"
+                  },
+                  {
+                    "qExpression": "Max( total <[Date.autoCalendar.Month]> Aggr( sum({<Date={\"=sum(Kwh)>0\"}>}Kwh)+sum({<Date={\"=sum(Kwh)<>0\"}>}Correction), [Date.autoCalendar.Month], [=Date(Date, 'DD/MM')] ), 1 )",
+                    "id": "maxBoxValue"
+                  }
+                ],
+                "qAttributeDimensions": [],
+                "qCalcCondition": {
+                  "qCond": {},
+                  "qMsg": {}
+                },
+                "showTitles": true,
+                "title": "",
+                "subtitle": "",
+                "footnote": "",
+                "disableNavMenu": false,
+                "showDetails": false,
+                "qStateName": "",
+                "othersLabel": "Others"
+              },
+              {
+                "qDef": {
+                  "qGrouping": "N",
+                  "qFieldDefs": [
+                    "=Date(Date, 'DD/MM')"
+                  ],
+                  "qFieldLabels": [
+                    "Date"
+                  ],
+                  "qSortCriterias": [
+                    {
+                      "qSortByNumeric": 1,
+                      "qSortByAscii": 1,
+                      "qSortByLoadOrder": 1,
+                      "qExpression": {}
+                    }
+                  ],
+                  "qNumberPresentations": [],
+                  "qActiveField": 0,
+                  "autoSort": true,
+                  "cId": "FExMJEG",
+                  "othersLabel": "Others"
+                },
+                "qOtherTotalSpec": {
+                  "qOtherMode": "OTHER_OFF",
+                  "qOtherCounted": {
+                    "qv": "10"
+                  },
+                  "qOtherLimit": {
+                    "qv": "0"
+                  },
+                  "qOtherLimitMode": "OTHER_GE_LIMIT",
+                  "qForceBadValueKeeping": true,
+                  "qApplyEvenWhenPossiblyWrongResult": true,
+                  "qOtherSortMode": "OTHER_SORT_DESCENDING",
+                  "qTotalMode": "TOTAL_OFF",
+                  "qReferencedExpression": {}
+                },
+                "qOtherLabel": {
+                  "qv": "Others"
+                },
+                "qTotalLabel": {},
+                "qCalcCond": {},
+                "qAttributeExpressions": [],
+                "qAttributeDimensions": [],
+                "qCalcCondition": {
+                  "qCond": {},
+                  "qMsg": {}
+                },
+                "showTitles": true,
+                "title": "",
+                "subtitle": "",
+                "footnote": "",
+                "disableNavMenu": false,
+                "showDetails": false,
+                "qStateName": "",
+                "othersLabel": "Others"
+              }
+            ],
+            "qMeasures": [
+              {
+                "qDef": {
+                  "qLabel": "Daily Energy (kWh)",
+                  "qTags": [],
+                  "qGrouping": "N",
+                  "qDef": "sum({<Date={\"=sum(Kwh)>0\"}>}Kwh)+sum({<Date={\"=sum(Kwh)<>0\"}>}Correction)",
+                  "qNumFormat": {
+                    "qType": "U",
+                    "qnDec": 10,
+                    "qUseThou": 0
+                  },
+                  "qAccumulate": 0,
+                  "qActiveExpression": 0,
+                  "qExpressions": [],
+                  "autoSort": true,
+                  "cId": "Ddb",
+                  "numFormatFromTemplate": true
+                },
+                "qSortBy": {
+                  "qSortByNumeric": -1,
+                  "qSortByLoadOrder": 1,
+                  "qExpression": {}
+                },
+                "qAttributeExpressions": [
+                  {
+                    "qExpression": "if (Date = FirstSortedValue(total Date, -aggr(sum(Kwh)+rangesum(Correction), Date)), green(), if(sum(Alertes)>0, LightRed(), '#4477aa'))\r\n//\tif (Date = FirstSortedValue(Date, -aggr(total Max(aggr(avg({<Inverter={\"AAN*\"}>}Pac1), TimeBucket, Date))+Max(aggr(avg({<Inverter={\"AAR*\"}>}Pac1), TimeBucket, Date)), Date)), '#ffcf02', '#4477aa'))",
+                    "qAttribute": true,
+                    "id": "colorByExpression"
+                  }
+                ],
+                "qAttributeDimensions": [],
+                "qCalcCond": {},
+                "qCalcCondition": {
+                  "qCond": {},
+                  "qMsg": {}
+                },
+                "qTrendLines": [
+                  {
+                    "qType": "AVERAGE",
+                    "qXColIx": 0,
+                    "qContinuousXAxis": "Never",
+                    "qMultiDimMode": "Sum",
+                    "label": "Avg",
+                    "style": {
+                      "autoColor": true,
+                      "paletteColor": {
+                        "color": "#f93f17",
+                        "index": 9
+                      },
+                      "dashed": true,
+                      "lineDash": "8, 4"
+                    },
+                    "cId": "SyKT"
+                  }
+                ],
+                "qMiniChartDef": {
+                  "qSortBy": {
+                    "qExpression": {}
+                  },
+                  "qOtherTotalSpec": {
+                    "qOtherMode": "OTHER_OFF",
+                    "qOtherCounted": {},
+                    "qOtherLimit": {},
+                    "qOtherLimitMode": "OTHER_GT_LIMIT",
+                    "qForceBadValueKeeping": true,
+                    "qApplyEvenWhenPossiblyWrongResult": true,
+                    "qOtherSortMode": "OTHER_SORT_DESCENDING",
+                    "qTotalMode": "TOTAL_OFF",
+                    "qReferencedExpression": {}
+                  },
+                  "qMaxNumberPoints": -1,
+                  "qAttributeExpressions": []
+                },
+                "showTitles": true,
+                "title": "",
+                "subtitle": "",
+                "footnote": "",
+                "disableNavMenu": false,
+                "showDetails": false,
+                "qStateName": ""
+              }
+            ],
+            "qInterColumnSortOrder": [
+              0,
+              2,
+              1
+            ],
+            "qSuppressZero": true,
+            "qSuppressMissing": true,
+            "qInitialDataFetch": [
+              {
+                "qLeft": 0,
+                "qTop": 0,
+                "qWidth": 0,
+                "qHeight": 0
+              }
+            ],
+            "qReductionMode": "N",
+            "qMode": "K",
+            "qPseudoDimPos": -1,
+            "qNoOfLeftDims": -1,
+            "qAlwaysFullyExpanded": true,
+            "qMaxStackedCells": 5000,
+            "qCalcCond": {},
+            "qTitle": {},
+            "qCalcCondition": {
+              "qCond": {},
+              "qMsg": {}
+            },
+            "qColumnOrder": [],
+            "qExpansionState": [],
+            "qLayoutExclude": {
+              "qHyperCubeDef": {
+                "qDimensions": [],
+                "qMeasures": [],
+                "qInterColumnSortOrder": [],
+                "qInitialDataFetch": [],
+                "qReductionMode": "N",
+                "qMode": "S",
+                "qPseudoDimPos": -1,
+                "qNoOfLeftDims": -1,
+                "qMaxStackedCells": 5000,
+                "qCalcCond": {},
+                "qTitle": {},
+                "qCalcCondition": {
+                  "qCond": {},
+                  "qMsg": {}
+                },
+                "qColumnOrder": [],
+                "qExpansionState": []
+              }
+            }
+          }
+        }
       },
       "qChildren": []
     }

@@ -21,6 +21,10 @@
       "qType": "measure"
     },
     {
+      "qId": "148ee214-be2f-4f1c-99f1-55b7a9ef0995",
+      "qType": "sheet"
+    },
+    {
       "qId": "18da58a1-64f3-446c-8526-743cdd28126f",
       "qType": "sheet"
     },
@@ -193,6 +197,10 @@
       "qType": "measure"
     },
     {
+      "qId": "SBhTpg",
+      "qType": "distributionplot"
+    },
+    {
       "qId": "URs",
       "qType": "RoseChart-RGraph"
     },
@@ -279,6 +287,10 @@
     {
       "qId": "e9d7ac1b-8fe7-49bc-91a5-55ff5b52b64e",
       "qType": "snapshot"
+    },
+    {
+      "qId": "e9d7e577-483d-4748-9cb9-b12fec1d9b1f",
+      "qType": "distributionplot"
     },
     {
       "qId": "ee2968cb-3507-480f-9da4-02b97212042e",

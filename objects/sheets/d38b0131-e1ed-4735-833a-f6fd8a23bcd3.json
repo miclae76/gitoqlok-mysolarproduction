@@ -10,7 +10,9 @@
     },
     "rank": 0,
     "thumbnail": {
-      "qStaticContentUrlDef": {}
+      "qStaticContentUrlDef": {
+        "qUrl": "/media/sheet_thumb_d38b0131-e1ed-4735-833a-f6fd8a23bcd3-0.5904953625167193.png"
+      }
     },
     "columns": 36,
     "rows": 18,
@@ -1673,7 +1675,7 @@
             "autoMinMax": false,
             "minMax": "max",
             "min": 0,
-            "max": 1.2
+            "max": 1.4
           }
         ],
         "qLayoutExclude": {}

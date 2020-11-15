@@ -9,6 +9,7 @@ Created By miclae76(Michael Laenen) at Sun Nov 15 2020 18:43:19 GMT+0100 (Centra
 Sheet Title | Description
 ------------ | -------------
 7 Days Weather Forecast|
+Statistical distribution|
 Site Information|
 Clustering|
 Weather Conditions|

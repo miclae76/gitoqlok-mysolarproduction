@@ -1,0 +1,45 @@
+///$tab Auto-generated section
+Set dataManagerTables = '','WindRose';
+//This block renames script tables from non generated section which conflict with the names of managed tables
+
+For each name in $(dataManagerTables) 
+    Let index = 0;
+    Let currentName = name; 
+    Let tableNumber = TableNumber(name); 
+    Let matches = 0; 
+    Do while not IsNull(tableNumber) or (index > 0 and matches > 0)
+        index = index + 1; 
+        currentName = name & '-' & index; 
+        tableNumber = TableNumber(currentName) 
+        matches = Match('$(currentName)', $(dataManagerTables));
+    Loop 
+    If index > 0 then 
+            Rename Table '$(name)' to '$(currentName)'; 
+    EndIf; 
+Next; 
+Set dataManagerTables = ;
+
+
+Unqualify *;
+
+[WindRose]:
+LOAD * INLINE 
+[
+Direction,Direction_Angle_From,Direction_Anglet_To
+N,0,22.5
+NNE,22.5,45
+NE,45,67.5
+ENE,67.5,90
+E,90,112.5
+ESE,112.5,135
+SE,135,157.5
+SSE,157.5,180
+S,180,202.5
+SSW,202.5,225
+SW,225,247.5
+WSW,247.5,270
+W,270,292.5
+WNW,292.5,315
+NW,315,337.5
+NNW,337.5,360
+](delimiter is ',');

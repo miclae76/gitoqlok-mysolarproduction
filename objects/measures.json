@@ -1,0 +1,491 @@
+[
+  {
+    "qInfo": {
+      "qId": "0abe1e31-c69f-4495-96f2-534a73fb318a",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "Last Reported Energy (kWh)",
+      "qDef": "Sum({1<[Date.autoCalendar.Date]={'$(=Max({<Pac1={\"*\"}>}Date))'}>}Kwh)+\nSum({1<[Date.autoCalendar.Date]={'$(=Max({<Pac1={\"*\"}>}Date))'}>}rangesum(Correction))",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "qLabelExpression": "='Last Reported  : '&max({<Pac1={\"*\"}>}Date)",
+      "qNumFormat": {
+        "qType": "U",
+        "qnDec": 10,
+        "qUseThou": 0
+      },
+      "coloring": {}
+    },
+    "qMetaDef": {
+      "title": "Last Reported Energy (kWh)",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "141af92e-90c6-401c-a7cb-dbe35d913150",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "Energy Var. LWTD",
+      "qDef": "(Sum({1<[Date.autoCalendar.WeeksAgo]={0}>}Kwh)+sum({1<[Date.autoCalendar.WeeksAgo]={0}>}rangesum(Correction)))/\r\n(Sum({1<[Date.autoCalendar.WeeksAgo]={1}>}Kwh)+sum({1<[Date.autoCalendar.WeeksAgo]={1}>}rangesum(Correction)))-1",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "qLabelExpression": "='Vs. Last Week'",
+      "qNumFormat": {
+        "qType": "U",
+        "qnDec": 10,
+        "qUseThou": 0
+      },
+      "coloring": {
+        "gradient": {
+          "colors": [
+            {
+              "color": "#f93f17",
+              "index": 10
+            },
+            {
+              "color": "#46c646",
+              "index": 2
+            }
+          ],
+          "breakTypes": [
+            false
+          ],
+          "limits": [
+            0
+          ],
+          "limitType": "absolute"
+        }
+      }
+    },
+    "qMetaDef": {
+      "title": "Energy Var. LWTD",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "60ad8a6b-e0dc-4463-b96d-08cb3f5cadba",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "Energy WTD (kWh)",
+      "qDef": "Sum({1<[Date.autoCalendar.WeeksAgo]={0}>}Kwh)\r\n+sum({1<[Date.autoCalendar.WeeksAgo]={0}>}rangesum(Correction))\n",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "qNumFormat": {
+        "qType": "U",
+        "qnDec": 10,
+        "qUseThou": 0
+      },
+      "coloring": {}
+    },
+    "qMetaDef": {
+      "title": "Energy WTD (kWh)",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "656bccd6-2f00-434e-ab63-75c6de38db4c",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "Peak Energy (kWh)",
+      "qDef": "max(aggr(sum({1}Kwh+rangesum(Correction)), Date))",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "qNumFormat": {
+        "qType": "U",
+        "qnDec": 10,
+        "qUseThou": 0
+      },
+      "coloring": {}
+    },
+    "qMetaDef": {
+      "title": "Peak Energy (kWh)",
+      "description": "Max Energy Power Delivered by System  (kWh) in a day",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "AqrPguh",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "Sunset Today",
+      "qDef": "Avg({<Date={\"$(=today())\"}>}[Coucher du soleil])",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "qNumFormat": {
+        "qType": "U",
+        "qnDec": 10,
+        "qUseThou": 0
+      },
+      "coloring": {
+        "baseColor": {
+          "color": "#000000",
+          "index": 15
+        }
+      }
+    },
+    "qMetaDef": {
+      "title": "Sunset Today",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "AqthVVr",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "Forecast",
+      "qDef": "PyTools.Prophet([Hist.dt_iso], avg([Hist.temp_max]), 'freq=D, return=yhat, take_log=true, changepoint_prior_scale=0.05')",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "qNumFormat": {
+        "qType": "U",
+        "qnDec": 10,
+        "qUseThou": 0
+      },
+      "coloring": {
+        "baseColor": {
+          "color": "#f93f17",
+          "index": 10
+        }
+      }
+    },
+    "qMetaDef": {
+      "title": "Forecast",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "GceSdNX",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "Upper Limit",
+      "qDef": "PyTools.Prophet([Hist.dt_iso], avg([Hist.temp_max]), 'freq=D, return=yhat_upper, take_log=true, changepoint_prior_scale=0.05')",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "qNumFormat": {
+        "qType": "U",
+        "qnDec": 10,
+        "qUseThou": 0
+      },
+      "coloring": {
+        "baseColor": {
+          "color": "#7b7a78",
+          "index": 13
+        }
+      }
+    },
+    "qMetaDef": {
+      "title": "Upper Limit",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "JxVFLHd",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "Peak Power Date",
+      "qDef": "FirstSortedValue(TimeBucket, -aggr(Max(aggr(avg({<Inverter={\"AAN*\"}>}Pac1), TimeBucket, Date))+Max(aggr(avg({<Inverter={\"AAR*\"}>}Pac1), TimeBucket, Date)), TimeBucket, Date))",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "qNumFormat": {
+        "qType": "U",
+        "qnDec": 10,
+        "qUseThou": 0
+      },
+      "coloring": {}
+    },
+    "qMetaDef": {
+      "title": "Peak Power Date",
+      "description": "Date when system delivered max instantaneous Power",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "MjPZxpq",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "Sunrise",
+      "qDef": "Avg([Lever du soleil])",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "qNumFormat": {
+        "qType": "U",
+        "qnDec": 10,
+        "qUseThou": 0
+      },
+      "coloring": {
+        "baseColor": {
+          "color": "#4477aa",
+          "index": 6
+        }
+      }
+    },
+    "qMetaDef": {
+      "title": "Sunrise",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "NffmqzE",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "Sunset",
+      "qDef": "Avg([Coucher du soleil])",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "qNumFormat": {
+        "qType": "U",
+        "qnDec": 10,
+        "qUseThou": 0
+      },
+      "coloring": {
+        "baseColor": {
+          "color": "#7b7a78",
+          "index": 13
+        }
+      }
+    },
+    "qMetaDef": {
+      "title": "Sunset",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "NqHmYzV",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "Lower Limit",
+      "qDef": "PyTools.Prophet([Hist.dt_iso], avg([Hist.temp_max]), 'freq=D, return=yhat_lower, take_log=true, changepoint_prior_scale=0.05')",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "qNumFormat": {
+        "qType": "U",
+        "qnDec": 10,
+        "qUseThou": 0
+      },
+      "coloring": {
+        "baseColor": {
+          "color": "#7b7a78",
+          "index": 13
+        }
+      }
+    },
+    "qMetaDef": {
+      "title": "Lower Limit",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "QkxPqVz",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "Peak Power (W)",
+      "qDef": "Max(aggr(max(aggr(avg({<Inverter={\"AAN*\"}>}Pac1), TimeBucket, Date))+Max(aggr(avg({<Inverter={\"AAR*\"}>}Pac1), TimeBucket, Date)), TimeBucket))\r\n//Max(aggr(avg({<Inverter={\"AAN*\"}>}Pac1), TimeBucket, Date))+Max(aggr(avg({<Inverter={\"AAR*\"}>}Pac1), TimeBucket, Date))\n",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "qNumFormat": {
+        "qType": "U",
+        "qnDec": 10,
+        "qUseThou": 0
+      },
+      "coloring": {}
+    },
+    "qMetaDef": {
+      "title": "Peak Power (W)",
+      "description": "Max Instantaneous Power Delivered by System  (kW)",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "RCjJm",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "Sunrise Today",
+      "qDef": "Avg({<Date={\"$(=today())\"}>} [Lever du soleil])",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "qNumFormat": {
+        "qType": "U",
+        "qnDec": 10,
+        "qUseThou": 0
+      },
+      "coloring": {
+        "baseColor": {
+          "color": "#000000",
+          "index": 15
+        }
+      }
+    },
+    "qMetaDef": {
+      "title": "Sunrise Today",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "VfKJM",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "Energy YTD (kWh)",
+      "qDef": "Sum({1<[Date.autoCalendar.InYTD]={1}>}Kwh+rangesum(Correction))",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "qNumFormat": {
+        "qType": "U",
+        "qnDec": 10,
+        "qUseThou": 0
+      },
+      "coloring": {}
+    },
+    "qMetaDef": {
+      "title": "Energy YTD (kWh)",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "ZBGwc",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "# Alertes ⚠️",
+      "qDef": "sum(Alertes)",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "qNumFormat": {
+        "qType": "U",
+        "qnDec": 10,
+        "qUseThou": 0
+      },
+      "coloring": {}
+    },
+    "qMetaDef": {
+      "title": "# Alertes ⚠️",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "dbdd80b1-2b63-4aa1-a496-677e40d6b18a",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "Peak Energy Date",
+      "qDef": "FirstSortedValue(Date, -aggr(sum(Kwh)+sum(Rangesum(Correction)), Date))",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "qNumFormat": {
+        "qType": "U",
+        "qnDec": 10,
+        "qUseThou": 0
+      },
+      "coloring": {}
+    },
+    "qMetaDef": {
+      "title": "Peak Energy Date",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "fc430cd8-310b-4c38-b765-c3e354710535",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "Energy MTD (kWh)",
+      "qDef": "Sum({1<[Date.autoCalendar.MonthsAgo]={0}>}Kwh)+Sum({1<[Date.autoCalendar.MonthsAgo]={0}>}rangesum(Correction))",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "qNumFormat": {
+        "qType": "U",
+        "qnDec": 10,
+        "qUseThou": 0
+      },
+      "coloring": {}
+    },
+    "qMetaDef": {
+      "title": "Energy MTD (kWh)",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "rYpskSa",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "Daily Energy (kWh)",
+      "qDef": "Sum(Kwh)+rangesum(Correction)",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "qNumFormat": {
+        "qType": "U",
+        "qnDec": 10,
+        "qUseThou": 0
+      },
+      "coloring": {}
+    },
+    "qMetaDef": {
+      "title": "Daily Energy (kWh)",
+      "description": "",
+      "tags": []
+    }
+  }
+]

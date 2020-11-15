@@ -1,0 +1,12 @@
+{
+  "qTitle": "MySolarProduction",
+  "qLastReloadTime": "2020-10-27T12:31:38.198Z",
+  "qMigrationHash": "504d4e39a7133ee172fbe29aa58348b1e4054149",
+  "qSavedInProductVersion": "12.763.0",
+  "qThumbnail": {
+    "qUrl": "/media/solarpanel.png"
+  },
+  "hassectionaccess": false,
+  "description": "",
+  "dynamicColor": "hsla(197,18%,43%,1)"
+}

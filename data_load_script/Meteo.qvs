@@ -1,0 +1,92 @@
+///$tab Meteo
+WindRose:
+LOAD * INLINE 
+[
+Direction,Direction_Angle_From,Direction_Anglet_To
+N,0,22.5
+NNE,22.5,45
+NE,45,67.5
+ENE,67.5,90
+E,90,112.5
+ESE,112.5,135
+SE,135,157.5
+SSE,157.5,180
+S,180,202.5
+SSW,202.5,225
+SW,225,247.5
+WSW,247.5,270
+W,270,292.5
+WNW,292.5,315
+NW,315,337.5
+NNW,337.5,360
+](delimiter is ',');
+
+Meteo:
+LOAD
+    MakeDate(Year, Month, Day) AS Date,
+    MakeDate(Year, Month, Day) AS Date_Meteo,
+    "Year",
+    "Month",
+    "Day",
+   // "Hour",
+   // "Minute",
+    "Temperature daily mean [2 m above gnd]",
+    "Total Precipitation (high resolution) daily sum [sfc]",
+    "Relative Humidity daily mean [2 m above gnd]",
+    "Total Cloud Cover daily mean [sfc]",
+    "Sunshine Duration daily sum [sfc]",
+    "Shortwave Radiation daily sum [sfc]",
+    "Wind Speed daily mean [10 m above gnd]",
+    "Wind Speed daily mean [80 m above gnd]",
+    "Wind Direction daily mean [10 m above gnd]",
+     "Wind Direction daily mean [80 m above gnd]",
+    "Temperature daily max [2 m above gnd]",
+    "Temperature daily min [2 m above gnd]",
+    "Total Cloud Cover daily max [sfc]",
+    "Total Cloud Cover daily min [sfc]",
+    "Wind Speed daily max [10 m above gnd]",
+    "Wind Speed daily min [10 m above gnd]",
+    "Wind Speed daily max [80 m above gnd]",
+    "Wind Speed daily min [80 m above gnd]"
+FROM [lib://SolarData/history_export_*.csv]
+(txt, utf8, embedded labels, delimiter is ';', no quotes, header is 11 lines)
+where not exists (Date_Meteo, MakeDate(Year, Month, Day));
+
+Concatenate(Meteo)
+LOAD
+    Date("timestamp") AS Date,
+     Date("timestamp") AS Date_Meteo,
+     Year("timestamp") AS   "Year",
+     Month("timestamp") AS "Month",
+     Day("timestamp") AS "Day",
+    "Musson Temperature [2 m elevation corrected]" AS "Temperature daily min [2 m above gnd]",
+    "Musson Temperature [2 m elevation corrected]1" AS "Temperature daily max [2 m above gnd]",
+    "Musson Temperature [2 m elevation corrected]2" AS "Temperature daily mean [2 m above gnd]",
+//     "Musson Relative Humidity [2 m]",
+//     "Musson Relative Humidity [2 m]1",
+    "Musson Relative Humidity [2 m]2" AS "Relative Humidity daily mean [2 m above gnd]",
+    "Musson Mean Sea Level Pressure [MSL]",
+    "Musson Mean Sea Level Pressure [MSL]1",
+    "Musson Mean Sea Level Pressure [MSL]2",
+    "Musson Precipitation Total" AS "Total Precipitation (high resolution) daily sum [sfc]",
+    "Musson Cloud Cover Total" AS "Total Cloud Cover daily mean [sfc]", 
+    "Musson Sunshine Duration",
+    "Musson Wind Speed [10 m]",
+    "Musson Wind Speed [10 m]1" AS "Wind Speed daily max [10 m above gnd]",
+    "Musson Wind Speed [10 m]2",
+    "Musson Wind Direction Dominant [10 m]" AS  "Wind Direction daily mean [10 m above gnd]",
+    "Musson Wind Speed [80 m]",
+    "Musson Wind Speed [80 m]1" AS "Wind Speed daily max [80 m above gnd]",
+    "Musson Wind Speed [80 m]2",
+    "Musson Wind Direction Dominant [80 m]" AS  "Wind Direction daily mean [80 m above gnd]"
+FROM [lib://SolarData/dataexport_*.xlsx]
+(ooxml, embedded labels, header is 9 lines, table is [0 daily])
+where not exists (Date_Meteo, Date("timestamp"));
+
+
+
+LEFT JOIN (Meteo)
+IntervalMatch("Wind Direction daily mean [80 m above gnd]") 
+LOAD Direction_Angle_From, Direction_Anglet_To Resident WindRose;
+
+//https://www.meteoblue.com/fr/meteo/archive/export/musson_belgique_2790516?daterange=2020-01-19%20to%202020-02-02&params=&params%5B%5D=11%3B2%20m%20above%20gnd&params%5B%5D=660%3Bsfc&params%5B%5D=71%3Bsfc&params%5B%5D=191%3Bsfc&params%5B%5D=204%3Bsfc&params%5B%5D=32%3B10%20m%20above%20gnd%3B31%3B10%20m%20above%20gnd&utc_offset=1&aggregation=daily&temperatureunit=CELSIUS&windspeedunit=KILOMETER_PER_HOUR

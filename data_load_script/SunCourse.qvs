@@ -1,0 +1,130 @@
+///$tab SunCourse
+temp_suncourse:
+CrossTable(Attribute, Value)
+LOAD
+    "coo: 49.5634711_5.722761" AS "Date",
+    "E 00:00:00",
+    "A 00:00:00",
+    "E 00:30:00",
+    "A 00:30:00",
+    "E 01:00:00",
+    "A 01:00:00",
+    "E 01:30:00",
+    "A 01:30:00",
+    "E 02:00:00",
+    "A 02:00:00",
+    "E 02:30:00",
+    "A 02:30:00",
+    "E 03:00:00",
+    "A 03:00:00",
+    "E 03:30:00",
+    "A 03:30:00",
+    "E 04:00:00",
+    "A 04:00:00",
+    "E 04:30:00",
+    "A 04:30:00",
+    "E 05:00:00",
+    "A 05:00:00",
+    "E 05:30:00",
+    "A 05:30:00",
+    "E 06:00:00",
+    "A 06:00:00",
+    "E 06:30:00",
+    "A 06:30:00",
+    "E 07:00:00",
+    "A 07:00:00",
+    "E 07:30:00",
+    "A 07:30:00",
+    "E 08:00:00",
+    "A 08:00:00",
+    "E 08:30:00",
+    "A 08:30:00",
+    "E 09:00:00",
+    "A 09:00:00",
+    "E 09:30:00",
+    "A 09:30:00",
+    "E 10:00:00",
+    "A 10:00:00",
+    "E 10:30:00",
+    "A 10:30:00",
+    "E 11:00:00",
+    "A 11:00:00",
+    "E 11:30:00",
+    "A 11:30:00",
+    "E 12:00:00",
+    "A 12:00:00",
+    "E 12:30:00",
+    "A 12:30:00",
+    "E 13:00:00",
+    "A 13:00:00",
+    "E 13:30:00",
+    "A 13:30:00",
+    "E 14:00:00",
+    "A 14:00:00",
+    "E 14:30:00",
+    "A 14:30:00",
+    "E 15:00:00",
+    "A 15:00:00",
+    "E 15:30:00",
+    "A 15:30:00",
+    "E 16:00:00",
+    "A 16:00:00",
+    "E 16:30:00",
+    "A 16:30:00",
+    "E 17:00:00",
+    "A 17:00:00",
+    "E 17:30:00",
+    "A 17:30:00",
+    "E 18:00:00",
+    "A 18:00:00",
+    "E 18:30:00",
+    "A 18:30:00",
+    "E 19:00:00",
+    "A 19:00:00",
+    "E 19:30:00",
+    "A 19:30:00",
+    "E 20:00:00",
+    "A 20:00:00",
+    "E 20:30:00",
+    "A 20:30:00",
+    "E 21:00:00",
+    "A 21:00:00",
+    "E 21:30:00",
+    "A 21:30:00",
+    "E 22:00:00",
+    "A 22:00:00",
+    "E 22:30:00",
+    "A 22:30:00",
+    "E 23:00:00",
+    "A 23:00:00",
+    "E 23:30:00",
+    "A 23:30:00"
+FROM [lib://SolarData/SunEarthTools_AnnualSunPath_2020_1579616076800.csv]
+(txt, codepage is 28591, embedded labels, delimiter is ';', msq);
+
+SunCourse:
+Load 
+	Date,
+    time(Time#(right(Attribute, 8), 'hh:mm:ss'), 'hh:mm') as TimeBucket,
+    Value as Elevation
+Resident temp_suncourse
+Where Left(Attribute, 1) = 'E';
+
+Left Join (SunCourse)
+Load 
+	Date,
+    time(Time#(right(Attribute, 8), 'hh:mm:ss'), 'hh:mm') as TimeBucket,
+    Value as Azimut
+Resident temp_suncourse
+Where Left(Attribute, 1) = 'A';
+
+Concatenate(SunCourse)
+LOAD 
+	null() AS Date,
+    Time((RecNo()-1)/48, 'hh:mm') AS TimeBucket,
+    7.5*(RecNo()-1) AS Azimut,
+    0 as Elevation
+  AutoGenerate 48;
+
+  
+drop Table temp_suncourse;

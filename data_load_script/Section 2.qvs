@@ -1,0 +1,10 @@
+///$tab Section 2
+LOAD
+    "Date",
+    "Lever du soleil",
+    "Coucher du soleil",
+    "Longueur du jour"
+FROM [lib://SolarData/Sunrise_2020.qvd]
+(qvd);
+
+exit Script;

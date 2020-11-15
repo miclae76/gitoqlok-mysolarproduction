@@ -1,0 +1,30 @@
+[
+  {
+    "qProperty": {
+      "qInfo": {
+        "qId": "3a55d7e1-80df-4d94-aa35-75463f38a672",
+        "qType": "appprops"
+      },
+      "qMetaDef": {},
+      "sheetTitleBgColor": {
+        "color": "#4477aa",
+        "index": 6
+      },
+      "sheetTitleGradientColor": {
+        "color": "#ffcf02",
+        "index": 8
+      },
+      "sheetTitleColor": "#ffffff",
+      "sheetLogoThumbnail": {
+        "qStaticContentUrlDef": {
+          "qUrl": "/media/soleil.png"
+        }
+      },
+      "sheetLogoPosition": "left",
+      "rtl": false,
+      "theme": "solar-theme",
+      "defaultBookmarkId": "0ff78a4e-55aa-4e23-9dc2-aced7352b028"
+    },
+    "qChildren": []
+  }
+]

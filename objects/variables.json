@@ -1,0 +1,46 @@
+[
+  {
+    "qInfo": {
+      "qId": "462ed464-c71b-4114-8ec3-a2476b0378ad",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "v.ClusterSize",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "7",
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "7852a062-dbe3-4a8b-9e5a-363f968bd675",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "v.DocTitle",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "MySolarProduction",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "84f23459-84dd-4b9f-a3b3-0e9d23a4e2c0",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "v.Mois",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "decembre"
+  }
+]

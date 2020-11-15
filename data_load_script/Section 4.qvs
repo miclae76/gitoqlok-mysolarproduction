@@ -1,0 +1,40 @@
+///$tab Section 4
+qualify *;
+Hist:
+LOAD
+    dt,
+    date(date#(left(dt_iso, 10), 'YYYY-MM-DD')) AS dt_iso,
+    "timezone",
+    city_name,
+    lat,
+    lon,
+    temp,
+    feels_like,
+    temp_min,
+    temp_max,
+    pressure,
+    sea_level,
+    grnd_level,
+    humidity,
+    wind_speed,
+    wind_deg,
+    rain_1h,
+    rain_3h,
+    snow_1h,
+    snow_3h,
+    clouds_all,
+    weather_id,
+    weather_main,
+    weather_description,
+    weather_icon
+FROM [lib://SolarData/Historical/feec12bb4a2d8fb17e10763f644d19bf.csv]
+(txt, codepage is 28591, embedded labels, delimiter is ',', msq);
+
+Unqualify *;
+tag field [Hist.dt_iso] with '$date';
+DERIVE FIELDS FROM FIELDS [Hist.dt_iso] USING [autoCalendar] ;
+
+
+Load
+	date(Today() + RecNo()-1) as [Hist.dt_iso]
+AutoGenerate 200;

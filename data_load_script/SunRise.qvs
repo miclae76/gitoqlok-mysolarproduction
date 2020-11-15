@@ -1,0 +1,34 @@
+///$tab SunRise
+Map_Mois:
+Mapping
+LOAD * INLINE [Mois, NumMois
+janvier,	1
+fevrier,	2
+mars,	3
+avril,	4
+mai,	5
+juin,	6
+juillet,	7
+aout,	8
+septembre,	9
+octobre,	10
+novembre,	11
+decembre,	12
+];
+
+
+for each v.Mois in 'janvier', 'fevrier', 'mars', 'avril', 'mai', 'juin', 'juillet', 'aout', 'septembre', 'octobre', 'novembre', 'decembre'
+
+  Sunrise:
+  LOAD 
+      MakeDate(right(subfield("Date", ',', 1), 4), ApplyMap('Map_Mois', '$(v.Mois)'), trim(left("Date", 2))) AS Date,
+  //    "Date",
+      "Lever du soleil",
+      "Coucher du soleil",
+      "Longueur du jour"
+  FROM [lib://Sunrise_Sunset_Musson]
+  (URL is 'https://www.sunrise-and-sunset.com/fr/sun/belgique/musson/2020/$(v.Mois)', html, utf8, embedded labels, table is @1);
+  
+next 
+
+store Sunrise into [lib://SolarData/Sunrise_2020.qvd] (qvd);

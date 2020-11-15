@@ -1,0 +1,113 @@
+///$tab Section
+Map_MonthShortName:
+Mapping
+LOAD 
+	SubField(ShortName, ';') AS MonthName,
+    RowNo() 				 AS MonthNum
+;
+LOAD 
+	'Jan;Feb;Mar;Apr;May;Jun;Jul;Aug;Sep;Oct;Nov;Dec' as ShortName 
+AutoGenerate 1;
+
+Inverter_List:
+LOAD * Inline [MyInverters
+AANN3020199B9023
+AARN2020191E1011
+];
+
+Corrections:
+LOAD * INLINE [
+Date, Correction
+19/03/2020, -19.9
+27/06/2020, -28.0
+28/06/2020, -8.0
+31/07/2020, -5
+17/09/2020, -18.25
+];
+
+Alertes:
+LOAD * INLINE [
+Date, Alertes
+03/04/2020, 3
+];
+
+
+Production_temp:
+LOAD *
+WHERE Exists(MyInverters, Inverter);
+LOAD
+	FileBaseName() AS DataFile,
+    KeepChar(Inverter, 'ANBRE0123456789') AS Inverter,
+    Vpv1,
+    Vpv2,
+    Vpv3,
+    Ipv1,
+    Ipv2,
+    Ipv3,
+    Vac1,
+    Vac2,
+    Vac3,
+    Iac1,
+    Iac2,
+    Iac3,
+    Pac1,
+    Pac2,
+    Pac3,
+    Fac,
+    "Temperature(℃)",
+    "Time(GMT +1)",					//ex. Jan.14 00:01,2020
+    Date(MakeDate(right("Time(GMT +1)", 4), ApplyMap('Map_MonthShortName', Left("Time(GMT +1)", 3)), trim(mid("Time(GMT +1)", 5, 2)))) AS Date,
+    Date(MakeDate(right("Time(GMT +1)", 4), ApplyMap('Map_MonthShortName', Left("Time(GMT +1)", 3)), trim(mid("Time(GMT +1)", 5, 2))), 'D/MM') AS Date.Short,
+    Timestamp(
+    	MakeDate(right("Time(GMT +1)", 4), ApplyMap('Map_MonthShortName', Left("Time(GMT +1)", 3)), trim(mid("Time(GMT +1)", 5, 2)))
+        +Time#(right(subfield("Time(GMT +1)", ',', 1), 5), 'hh:mm')
+    ) AS TimeStamp,
+    Time#(right(subfield("Time(GMT +1)", ',', 1), 5), 'hh:mm') AS Time,
+   // Time( class( Time#(right(subfield("Time(GMT +1)", ',', 1), 5), 'hh:mm'), 1/24/6)) as TimeBucket,
+    "Today's Energy(kWh)",
+    "Today's Energy(kWh)" - if(Previous(Inverter)<>Inverter or trim(mid("Time(GMT +1)", 5, 2)) <> previous(trim(mid("Time(GMT +1)", 5, 2))), 0, Previous("Today's Energy(kWh)")) AS Kwh,
+    "Total Energy(kWh)"
+FROM [lib://SolarData/Laenen__Musson_*.csv]
+(txt, utf8, embedded labels, delimiter is ',', header is 7 lines)
+WHERE 
+len(trim(Inverter)) > 0 
+AND len(Trim("Today's Energy(kWh)")) > 0 
+AND left("Today's Energy(kWh)", 1) <> 'T';
+
+Production:
+NoConcatenate
+LOAD *, 
+	Time( class( if(num(Date) < 43919, Time+1/24, Time) , 1/24/6)) as TimeBucket
+	//if(Date < '29/03/2020', 
+
+Resident Production_temp where Kwh > 0;
+drop table Production_temp;
+
+
+[autoCalendar]: 
+  DECLARE FIELD DEFINITION Tagged ('$date')
+FIELDS
+  Dual(Year($1), YearStart($1)) AS [Year] Tagged ('$axis', '$year'),
+  Dual('Q'&Num(Ceil(Num(Month($1))/3)),Num(Ceil(NUM(Month($1))/3),00)) AS [Quarter] Tagged ('$quarter', '$cyclic'),
+  Dual(Year($1)&'-Q'&Num(Ceil(Num(Month($1))/3)),QuarterStart($1)) AS [YearQuarter] Tagged ('$yearquarter', '$qualified'),
+  Dual('Q'&Num(Ceil(Num(Month($1))/3)),QuarterStart($1)) AS [_YearQuarter] Tagged ('$yearquarter', '$hidden', '$simplified'),
+  Month($1) AS [Month] Tagged ('$month', '$cyclic'),
+  Dual(Year($1)&'-'&Month($1), monthstart($1)) AS [YearMonth] Tagged ('$axis', '$yearmonth', '$qualified'),
+  Dual(Month($1), monthstart($1)) AS [_YearMonth] Tagged ('$axis', '$yearmonth', '$simplified', '$hidden'),
+  Dual('W'&Num(Week($1),00), Num(Week($1),00)) AS [Week] Tagged ('$weeknumber', '$cyclic'),
+  Date(Floor($1)) AS [Date] Tagged ('$axis', '$date', '$qualified'),
+  Date(Floor($1), 'D') AS [_Date] Tagged ('$axis', '$date', '$hidden', '$simplified'),
+  If (DayNumberOfYear($1) <= DayNumberOfYear(Today()), 1, 0) AS [InYTD] ,
+  Year(Today())-Year($1) AS [YearsAgo] ,
+  If (DayNumberOfQuarter($1) <= DayNumberOfQuarter(Today()),1,0) AS [InQTD] ,
+  4*Year(Today())+Ceil(Month(Today())/3)-4*Year($1)-Ceil(Month($1)/3) AS [QuartersAgo] ,
+  Ceil(Month(Today())/3)-Ceil(Month($1)/3) AS [QuarterRelNo] ,
+  If(Day($1)<=Day(Today()),1,0) AS [InMTD] ,
+  12*Year(Today())+Month(Today())-12*Year($1)-Month($1) AS [MonthsAgo] ,
+  Month(Today())-Month($1) AS [MonthRelNo] ,
+  If(WeekDay($1)<=WeekDay(Today()),1,0) AS [InWTD] ,
+  (WeekStart(Today())-WeekStart($1))/7 AS [WeeksAgo] ,
+  Week(Today())-Week($1) AS [WeekRelNo], 
+  Weekday($1) AS [Weekday];
+
+DERIVE FIELDS FROM FIELDS [Date], [TimeStamp] USING [autoCalendar] ;

@@ -1,0 +1,120 @@
+[
+  {
+    "qInfo": {
+      "qId": "0ff78a4e-55aa-4e23-9dc2-aced7352b028",
+      "qType": "bookmark"
+    },
+    "qMetaDef": {
+      "title": "Default at Opening",
+      "description": ""
+    },
+    "creationDate": "2020-03-15T19:50:15.500Z",
+    "sheetId": "d38b0131-e1ed-4735-833a-f6fd8a23bcd3",
+    "selectionFields": "",
+    "qData": {
+      "qBookMark": {
+        "qStateData": [
+          {
+            "qStateName": "$",
+            "qFieldItems": []
+          }
+        ],
+        "qUtcModifyTime": 43905.86822916667,
+        "qVariableItems": [],
+        "qPatches": []
+      }
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "adb8bacc-4949-4523-a746-722234cf3919",
+      "qType": "bookmark"
+    },
+    "qMetaDef": {
+      "title": "Alertes_20200403",
+      "description": "Mes premières alertes, Overheat Inverter 2kW"
+    },
+    "creationDate": "2020-04-15T08:12:14.357Z",
+    "sheetId": "d38b0131-e1ed-4735-833a-f6fd8a23bcd3",
+    "selectionFields": "=Date(Date,'DD/MM')",
+    "qData": {
+      "qBookMark": {
+        "qStateData": [
+          {
+            "qStateName": "$",
+            "qFieldItems": [
+              {
+                "qDef": {
+                  "qName": "=Date(Date,'DD/MM')",
+                  "qType": "PRESENT"
+                },
+                "qSelectInfo": {
+                  "qRangeLo": "NaN",
+                  "qRangeHi": "NaN",
+                  "qNumberFormat": {
+                    "qType": "U",
+                    "qnDec": 10,
+                    "qUseThou": 0
+                  },
+                  "qRangeInfo": [],
+                  "qContinuousRangeInfo": []
+                },
+                "qValues": [],
+                "qExcludedValues": []
+              }
+            ]
+          }
+        ],
+        "qUtcModifyTime": 43936.425162037034,
+        "qVariableItems": [],
+        "qPatches": []
+      }
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "ee2968cb-3507-480f-9da4-02b97212042e",
+      "qType": "bookmark"
+    },
+    "qMetaDef": {
+      "title": "Forecast Temperature - Initialization",
+      "description": ""
+    },
+    "creationDate": "2020-04-27T16:05:01.466Z",
+    "sheetId": null,
+    "selectionFields": "Hist.dt_iso.autoCalendar.Year",
+    "qData": {
+      "qBookMark": {
+        "qStateData": [
+          {
+            "qStateName": "$",
+            "qFieldItems": [
+              {
+                "qDef": {
+                  "qName": "=Dual(Year([Hist.dt_iso]),YearStart([Hist.dt_iso]))",
+                  "qType": "PRESENT"
+                },
+                "qSelectInfo": {
+                  "qRangeLo": "NaN",
+                  "qRangeHi": "NaN",
+                  "qNumberFormat": {
+                    "qType": "U",
+                    "qnDec": 10,
+                    "qUseThou": 0
+                  },
+                  "qRangeInfo": [],
+                  "qContinuousRangeInfo": []
+                },
+                "qValues": [],
+                "qExcludedValues": []
+              }
+            ]
+          }
+        ],
+        "qUtcModifyTime": 43948.753483796296,
+        "qVariableItems": [],
+        "qPatches": []
+      }
+    }
+  }
+]

@@ -1,0 +1,51 @@
+[
+  {
+    "qInfo": {
+      "qId": "JfmdS",
+      "qType": "dimension"
+    },
+    "qDim": {
+      "qGrouping": "N",
+      "qFieldDefs": [
+        "Inverter"
+      ],
+      "qFieldLabels": [
+        "Inverter"
+      ],
+      "title": "Inverter",
+      "coloring": {
+        "changeHash": "0.3377181648578813"
+      }
+    },
+    "qMetaDef": {
+      "title": "Inverter",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "ZkFmWm",
+      "qType": "dimension"
+    },
+    "qDim": {
+      "qGrouping": "N",
+      "qFieldDefs": [
+        "=if([Date.autoCalendar.Weekday] <5, 'Jour', 'Nuit')"
+      ],
+      "qFieldLabels": [
+        "Compteur_Jour_Nuit"
+      ],
+      "title": "Compteur_Jour_Nuit",
+      "coloring": {
+        "changeHash": "0.25807894857881997",
+        "colorMapRef": "ZkFmWm"
+      }
+    },
+    "qMetaDef": {
+      "title": "Compteur_Jour_Nuit",
+      "description": "",
+      "tags": []
+    }
+  }
+]

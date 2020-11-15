@@ -1,0 +1,4273 @@
+[
+  {
+    "qProperty": {
+      "qInfo": {
+        "qId": "cbd0050b-fbcf-4f34-9013-5b84e2d2dd75",
+        "qType": "story"
+      },
+      "qMetaDef": {
+        "title": "My new story",
+        "description": ""
+      },
+      "rank": -1,
+      "thumbnail": {
+        "qStaticContentUrlDef": {}
+      },
+      "qChildListDef": {
+        "qData": {
+          "title": "/title",
+          "rank": "/rank"
+        }
+      }
+    },
+    "qChildren": [
+      {
+        "qProperty": {
+          "qInfo": {
+            "qId": "yPGgHF",
+            "qType": "slide"
+          },
+          "qMetaDef": {},
+          "rank": -1,
+          "qChildListDef": {
+            "qData": {
+              "title": "/title",
+              "sheetId": "/sheetId",
+              "ratio": "/ratio",
+              "position": "/position",
+              "dataPath": "/dataPath",
+              "srcPath": "/srcPath",
+              "visualization": "/visualization",
+              "visualizationType": "/visualizationType",
+              "style": "/style"
+            }
+          }
+        },
+        "qChildren": [
+          {
+            "qProperty": {
+              "qInfo": {
+                "qId": "EBeAMhy",
+                "qType": "slideitem"
+              },
+              "qMetaDef": {},
+              "qEmbeddedSnapshotDef": {},
+              "title": "",
+              "sheetId": "",
+              "ratio": true,
+              "position": {
+                "top": "37.03671%",
+                "left": "2.08312%",
+                "width": "93.74909%",
+                "height": "59.25893%",
+                "z-index": 4,
+                "right": "auto"
+              },
+              "visualization": "snapshot",
+              "visualizationType": "barchart",
+              "style": {
+                "id": "bfd03561-8fb5-4cd6-999c-72c8c1f52cf9"
+              }
+            },
+            "qChildren": [],
+            "qEmbeddedSnapshotRef": {
+              "qProperties": {
+                "qInfo": {
+                  "qId": "8c679db0-7d4b-41ee-a853-ff7d0e2b6169",
+                  "qType": "embeddedsnapshot"
+                },
+                "qMetaDef": {
+                  "title": "Daily Energy  kWh",
+                  "description": "",
+                  "annotation": "TEST"
+                },
+                "creationDate": "2020-03-19T16:58:45.690Z",
+                "qMeta": {
+                  "privileges": [
+                    "read",
+                    "update",
+                    "delete",
+                    "exportdata"
+                  ]
+                },
+                "qSelectionInfo": {
+                  "qInSelections": false,
+                  "qMadeSelections": false
+                },
+                "qHyperCube": {
+                  "qSize": {
+                    "qcx": 2,
+                    "qcy": 79
+                  },
+                  "qDimensionInfo": [
+                    {
+                      "qFallbackTitle": "Date.Date",
+                      "qApprMaxGlyphCount": 5,
+                      "qCardinal": 79,
+                      "qSortIndicator": "A",
+                      "qGroupFallbackTitles": [
+                        "Date.Date"
+                      ],
+                      "qGroupPos": 0,
+                      "qStateCounts": {
+                        "qLocked": 0,
+                        "qSelected": 0,
+                        "qOption": 79,
+                        "qDeselected": 0,
+                        "qAlternative": 0,
+                        "qExcluded": 0,
+                        "qSelectedExcluded": 0,
+                        "qLockedExcluded": 0
+                      },
+                      "qTags": [
+                        "$numeric",
+                        "$integer",
+                        "$timestamp",
+                        "$date"
+                      ],
+                      "qDimensionType": "N",
+                      "qGrouping": "N",
+                      "qNumFormat": {
+                        "qType": "D",
+                        "qnDec": 0,
+                        "qUseThou": 0,
+                        "qFmt": "D/MM"
+                      },
+                      "qIsAutoFormat": true,
+                      "qGroupFieldDefs": [
+                        "=Date.Short"
+                      ],
+                      "qMin": 43831,
+                      "qMax": 43909,
+                      "qContinuousAxes": true,
+                      "qAttrExprInfo": [],
+                      "qAttrDimInfo": [],
+                      "qCardinalities": {
+                        "qCardinal": 79,
+                        "qHypercubeCardinal": 79,
+                        "qAllValuesCardinal": -1
+                      },
+                      "autoSort": true,
+                      "cId": "mHesRH",
+                      "othersLabel": "Others"
+                    }
+                  ],
+                  "qMeasureInfo": [
+                    {
+                      "qFallbackTitle": "Sum(Kwh)",
+                      "qApprMaxGlyphCount": 15,
+                      "qCardinal": 0,
+                      "qSortIndicator": "D",
+                      "qNumFormat": {
+                        "qType": "R",
+                        "qnDec": 0,
+                        "qUseThou": 1,
+                        "qFmt": "##############",
+                        "qDec": "."
+                      },
+                      "qMin": 0.57,
+                      "qMax": 38.21999999999998,
+                      "qIsAutoFormat": true,
+                      "qAttrExprInfo": [
+                        {
+                          "qMin": 4278222848,
+                          "qMax": 4278222848,
+                          "qFallbackTitle": "if (Date = FirstSortedValue(total Date, -aggr(sum(Kwh), Date)), green(), \r\n\tif (Date = FirstSortedValue(Date, -aggr(total Max(aggr(avg({<Inverter={\"AAN*\"}>}Pac1), TimeBucket, Date))+Max(aggr(avg({<Inverter={\"AAR*\"}>}Pac1), TimeBucket, Date)), Date)), '#ffcf02', '#4477aa'))",
+                          "qMinText": "RGB(0,128,0)",
+                          "qMaxText": "RGB(0,128,0)",
+                          "qNumFormat": {
+                            "qType": "U",
+                            "qnDec": 10,
+                            "qUseThou": 0
+                          },
+                          "id": "colorByExpression"
+                        }
+                      ],
+                      "qAttrDimInfo": [],
+                      "qTrendLines": [
+                        {
+                          "qType": "AVERAGE",
+                          "qCoeff": [
+                            11.579493670886073
+                          ],
+                          "qR2": 0,
+                          "qExpression": "y = 11.579",
+                          "qElemNo": -1,
+                          "label": "Avg",
+                          "style": {
+                            "autoColor": true,
+                            "paletteColor": {
+                              "color": "#f93f17",
+                              "index": 9
+                            },
+                            "dashed": true,
+                            "lineDash": "8, 4"
+                          },
+                          "cId": "SyKT"
+                        }
+                      ],
+                      "autoSort": true,
+                      "cId": "Ddb",
+                      "numFormatFromTemplate": true
+                    }
+                  ],
+                  "qEffectiveInterColumnSortOrder": [
+                    0,
+                    1
+                  ],
+                  "qGrandTotalRow": [
+                    {
+                      "qText": "914.77999999991",
+                      "qNum": 914.7799999999085,
+                      "qElemNumber": -1,
+                      "qState": "X",
+                      "qIsTotalCell": true
+                    }
+                  ],
+                  "qDataPages": [
+                    {
+                      "qMatrix": [
+                        [
+                          {
+                            "qText": "1/01",
+                            "qNum": 43831,
+                            "qElemNumber": 35,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "1.02",
+                            "qNum": 1.02,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "2/01",
+                            "qNum": 43832,
+                            "qElemNumber": 36,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "1.23",
+                            "qNum": 1.23,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "3/01",
+                            "qNum": 43833,
+                            "qElemNumber": 37,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "0.57",
+                            "qNum": 0.57,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "4/01",
+                            "qNum": 43834,
+                            "qElemNumber": 38,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "0.98",
+                            "qNum": 0.98,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "5/01",
+                            "qNum": 43835,
+                            "qElemNumber": 39,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "1.11",
+                            "qNum": 1.11,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "6/01",
+                            "qNum": 43836,
+                            "qElemNumber": 40,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "6.66",
+                            "qNum": 6.66,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "7/01",
+                            "qNum": 43837,
+                            "qElemNumber": 41,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "1.65",
+                            "qNum": 1.65,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "8/01",
+                            "qNum": 43838,
+                            "qElemNumber": 42,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "2.09",
+                            "qNum": 2.089999999999999,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "9/01",
+                            "qNum": 43839,
+                            "qElemNumber": 43,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "3.67",
+                            "qNum": 3.669999999999993,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "10/01",
+                            "qNum": 43840,
+                            "qElemNumber": 44,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "3.59",
+                            "qNum": 3.5899999999999954,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "11/01",
+                            "qNum": 43841,
+                            "qElemNumber": 45,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "5.81",
+                            "qNum": 5.809999999999995,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "12/01",
+                            "qNum": 43842,
+                            "qElemNumber": 46,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "3.2",
+                            "qNum": 3.199999999999995,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "13/01",
+                            "qNum": 43843,
+                            "qElemNumber": 47,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "5.2",
+                            "qNum": 5.199999999999996,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "14/01",
+                            "qNum": 43844,
+                            "qElemNumber": 48,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "4.68",
+                            "qNum": 4.679999999999998,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "15/01",
+                            "qNum": 43845,
+                            "qElemNumber": 49,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "12.73",
+                            "qNum": 12.72999999999999,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "16/01",
+                            "qNum": 43846,
+                            "qElemNumber": 50,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "20.53",
+                            "qNum": 20.529999999999998,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "17/01",
+                            "qNum": 43847,
+                            "qElemNumber": 51,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "3.43",
+                            "qNum": 3.4299999999999953,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "18/01",
+                            "qNum": 43848,
+                            "qElemNumber": 52,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "6.08",
+                            "qNum": 6.079999999999989,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "19/01",
+                            "qNum": 43849,
+                            "qElemNumber": 53,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "10.82",
+                            "qNum": 10.819999999999993,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "20/01",
+                            "qNum": 43850,
+                            "qElemNumber": 54,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "20.16",
+                            "qNum": 20.16,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "21/01",
+                            "qNum": 43851,
+                            "qElemNumber": 55,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "22.05",
+                            "qNum": 22.049999999999983,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "22/01",
+                            "qNum": 43852,
+                            "qElemNumber": 56,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "23.28",
+                            "qNum": 23.279999999999998,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "23/01",
+                            "qNum": 43853,
+                            "qElemNumber": 57,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "4.74",
+                            "qNum": 4.739999999999995,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "24/01",
+                            "qNum": 43854,
+                            "qElemNumber": 58,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "6.04",
+                            "qNum": 6.039999999999994,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "25/01",
+                            "qNum": 43855,
+                            "qElemNumber": 59,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "4.85",
+                            "qNum": 4.8499999999999925,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "26/01",
+                            "qNum": 43856,
+                            "qElemNumber": 60,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "10.56",
+                            "qNum": 10.559999999999993,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "27/01",
+                            "qNum": 43857,
+                            "qElemNumber": 61,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "2.9",
+                            "qNum": 2.8999999999999932,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "28/01",
+                            "qNum": 43858,
+                            "qElemNumber": 62,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "5.98",
+                            "qNum": 5.9799999999999915,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "29/01",
+                            "qNum": 43859,
+                            "qElemNumber": 63,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "9.6",
+                            "qNum": 9.599999999999993,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "30/01",
+                            "qNum": 43860,
+                            "qElemNumber": 64,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "7.47",
+                            "qNum": 7.4699999999999935,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "31/01",
+                            "qNum": 43861,
+                            "qElemNumber": 65,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "5.04",
+                            "qNum": 5.039999999999994,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "1/02",
+                            "qNum": 43862,
+                            "qElemNumber": 0,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "4.12",
+                            "qNum": 4.119999999999993,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "2/02",
+                            "qNum": 43863,
+                            "qElemNumber": 1,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "4.67",
+                            "qNum": 4.669999999999993,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "3/02",
+                            "qNum": 43864,
+                            "qElemNumber": 2,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "6.8",
+                            "qNum": 6.799999999999997,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "4/02",
+                            "qNum": 43865,
+                            "qElemNumber": 3,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "7.78",
+                            "qNum": 7.779999999999994,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "5/02",
+                            "qNum": 43866,
+                            "qElemNumber": 4,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "26.73",
+                            "qNum": 26.730000000000032,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "6/02",
+                            "qNum": 43867,
+                            "qElemNumber": 5,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "26.47",
+                            "qNum": 26.47000000000001,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "7/02",
+                            "qNum": 43868,
+                            "qElemNumber": 6,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "26.88",
+                            "qNum": 26.880000000000017,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "8/02",
+                            "qNum": 43869,
+                            "qElemNumber": 7,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "5.61",
+                            "qNum": 5.609999999999996,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "9/02",
+                            "qNum": 43870,
+                            "qElemNumber": 8,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "8.44",
+                            "qNum": 8.439999999999998,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "10/02",
+                            "qNum": 43871,
+                            "qElemNumber": 9,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "16.03",
+                            "qNum": 16.029999999999994,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "11/02",
+                            "qNum": 43872,
+                            "qElemNumber": 10,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "13.94",
+                            "qNum": 13.940000000000001,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "12/02",
+                            "qNum": 43873,
+                            "qElemNumber": 11,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "7.39",
+                            "qNum": 7.3899999999999935,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "13/02",
+                            "qNum": 43874,
+                            "qElemNumber": 12,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "7.18",
+                            "qNum": 7.179999999999987,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "14/02",
+                            "qNum": 43875,
+                            "qElemNumber": 13,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "10.95",
+                            "qNum": 10.94999999999999,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "15/02",
+                            "qNum": 43876,
+                            "qElemNumber": 14,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "22.49",
+                            "qNum": 22.489999999999995,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "16/02",
+                            "qNum": 43877,
+                            "qElemNumber": 15,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "13.5",
+                            "qNum": 13.499999999999993,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "17/02",
+                            "qNum": 43878,
+                            "qElemNumber": 16,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "11.35",
+                            "qNum": 11.349999999999996,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "18/02",
+                            "qNum": 43879,
+                            "qElemNumber": 17,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "9.1",
+                            "qNum": 9.09999999999999,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "19/02",
+                            "qNum": 43880,
+                            "qElemNumber": 18,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "19.94",
+                            "qNum": 19.939999999999976,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "20/02",
+                            "qNum": 43881,
+                            "qElemNumber": 19,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "7.06",
+                            "qNum": 7.059999999999999,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "21/02",
+                            "qNum": 43882,
+                            "qElemNumber": 20,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "18.39",
+                            "qNum": 18.38999999999999,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "22/02",
+                            "qNum": 43883,
+                            "qElemNumber": 21,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "12.39",
+                            "qNum": 12.39,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "23/02",
+                            "qNum": 43884,
+                            "qElemNumber": 22,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "3.46",
+                            "qNum": 3.459999999999993,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "24/02",
+                            "qNum": 43885,
+                            "qElemNumber": 23,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "6.72",
+                            "qNum": 6.719999999999992,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "25/02",
+                            "qNum": 43886,
+                            "qElemNumber": 24,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "16.64",
+                            "qNum": 16.639999999999976,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "26/02",
+                            "qNum": 43887,
+                            "qElemNumber": 25,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "11.83",
+                            "qNum": 11.829999999999998,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "27/02",
+                            "qNum": 43888,
+                            "qElemNumber": 26,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "3.91",
+                            "qNum": 3.909999999999995,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "28/02",
+                            "qNum": 43889,
+                            "qElemNumber": 27,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "19.83",
+                            "qNum": 19.83,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "29/02",
+                            "qNum": 43890,
+                            "qElemNumber": 28,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "9.85",
+                            "qNum": 9.849999999999993,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "1/03",
+                            "qNum": 43891,
+                            "qElemNumber": 29,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "13.55",
+                            "qNum": 13.549999999999992,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "2/03",
+                            "qNum": 43892,
+                            "qElemNumber": 30,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "9.74",
+                            "qNum": 9.739999999999988,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "3/03",
+                            "qNum": 43893,
+                            "qElemNumber": 31,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "9.38",
+                            "qNum": 9.379999999999987,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "4/03",
+                            "qNum": 43894,
+                            "qElemNumber": 32,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "17.82",
+                            "qNum": 17.819999999999993,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "5/03",
+                            "qNum": 43895,
+                            "qElemNumber": 33,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "5.86",
+                            "qNum": 5.8599999999999905,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "6/03",
+                            "qNum": 43896,
+                            "qElemNumber": 34,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "6.93",
+                            "qNum": 6.929999999999991,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "7/03",
+                            "qNum": 43897,
+                            "qElemNumber": 66,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "25.64",
+                            "qNum": 25.639999999999986,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "8/03",
+                            "qNum": 43898,
+                            "qElemNumber": 67,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "13.27",
+                            "qNum": 13.269999999999987,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "9/03",
+                            "qNum": 43899,
+                            "qElemNumber": 68,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "20.88",
+                            "qNum": 20.88,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "10/03",
+                            "qNum": 43900,
+                            "qElemNumber": 69,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "6.68",
+                            "qNum": 6.679999999999987,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "11/03",
+                            "qNum": 43901,
+                            "qElemNumber": 70,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "9.91",
+                            "qNum": 9.909999999999998,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "12/03",
+                            "qNum": 43902,
+                            "qElemNumber": 71,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "15.01",
+                            "qNum": 15.01,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "13/03",
+                            "qNum": 43903,
+                            "qElemNumber": 72,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "17.24",
+                            "qNum": 17.239999999999988,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "14/03",
+                            "qNum": 43904,
+                            "qElemNumber": 73,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "13.54",
+                            "qNum": 13.540000000000003,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "15/03",
+                            "qNum": 43905,
+                            "qElemNumber": 74,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "29.47",
+                            "qNum": 29.470000000000006,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "16/03",
+                            "qNum": 43906,
+                            "qElemNumber": 75,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "30.46",
+                            "qNum": 30.460000000000008,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "17/03",
+                            "qNum": 43907,
+                            "qElemNumber": 76,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "34.16",
+                            "qNum": 34.16,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "18/03",
+                            "qNum": 43908,
+                            "qElemNumber": 77,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "19.85",
+                            "qNum": 19.84999999999999,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "19/03",
+                            "qNum": 43909,
+                            "qElemNumber": 78,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "38.22",
+                            "qNum": 38.21999999999998,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "RGB(0,128,0)",
+                                  "qNum": 4278222848
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      ],
+                      "qTails": [
+                        {
+                          "qUp": 0,
+                          "qDown": 0
+                        }
+                      ],
+                      "qArea": {
+                        "qLeft": 0,
+                        "qTop": 0,
+                        "qWidth": 2,
+                        "qHeight": 79
+                      }
+                    }
+                  ],
+                  "qPivotDataPages": [],
+                  "qStackedDataPages": [],
+                  "qMode": "S",
+                  "qNoOfLeftDims": -1,
+                  "qTreeNodesOnDim": [],
+                  "qColumnOrder": []
+                },
+                "refLine": {
+                  "refLines": []
+                },
+                "showTitles": true,
+                "title": "Daily Energy  kWh",
+                "subtitle": "",
+                "footnote": "",
+                "showDetails": false,
+                "components": [
+                  {
+                    "key": "bar",
+                    "style": {
+                      "width": 0.88,
+                      "strokeColor": {
+                        "index": -1,
+                        "color": "#205891"
+                      },
+                      "strokeWidth": "none"
+                    }
+                  }
+                ],
+                "barGrouping": {
+                  "grouping": "grouped"
+                },
+                "orientation": "vertical",
+                "scrollbar": "miniChart",
+                "scrollStartPos": 1,
+                "gridLine": {
+                  "auto": true,
+                  "spacing": 2
+                },
+                "dataPoint": {
+                  "showLabels": true,
+                  "showSegmentLabels": false,
+                  "showTotalLabels": true
+                },
+                "color": {
+                  "auto": false,
+                  "mode": "byExpression",
+                  "useBaseColors": "off",
+                  "paletteColor": {
+                    "index": 8,
+                    "color": "#ffcf02"
+                  },
+                  "useDimColVal": true,
+                  "useMeasureGradient": true,
+                  "persistent": false,
+                  "expressionIsColor": true,
+                  "expressionLabel": "",
+                  "measureScheme": "sg",
+                  "reverseScheme": false,
+                  "dimensionScheme": "12",
+                  "autoMinMax": true,
+                  "measureMin": 0,
+                  "measureMax": 10,
+                  "colorExpression": "if (Date = FirstSortedValue(total Date, -aggr(sum(Kwh), Date)), green(), \r\n\tif (Date = FirstSortedValue(Date, -aggr(total Max(aggr(avg({<Inverter={\"AAN*\"}>}Pac1), TimeBucket, Date))+Max(aggr(avg({<Inverter={\"AAR*\"}>}Pac1), TimeBucket, Date)), Date)), '#ffcf02', '#4477aa'))"
+                },
+                "legend": {
+                  "show": true,
+                  "dock": "auto",
+                  "showTitle": true
+                },
+                "dimensionAxis": {
+                  "continuousAuto": true,
+                  "show": "labels",
+                  "label": "auto",
+                  "dock": "near",
+                  "axisDisplayMode": "auto",
+                  "maxVisibleItems": 21
+                },
+                "preferContinuousAxis": false,
+                "measureAxis": {
+                  "show": "all",
+                  "dock": "near",
+                  "spacing": 1,
+                  "autoMinMax": true,
+                  "minMax": "min",
+                  "min": 0,
+                  "max": 10
+                },
+                "tooltip": {
+                  "auto": true,
+                  "data": {
+                    "qHyperCube": {
+                      "qSize": {
+                        "qcx": 0,
+                        "qcy": 0
+                      },
+                      "qDimensionInfo": [],
+                      "qMeasureInfo": [],
+                      "qEffectiveInterColumnSortOrder": [],
+                      "qGrandTotalRow": [],
+                      "qDataPages": [],
+                      "qPivotDataPages": [],
+                      "qStackedDataPages": [],
+                      "qMode": "S",
+                      "qNoOfLeftDims": -1,
+                      "qTreeNodesOnDim": [],
+                      "qColumnOrder": []
+                    }
+                  }
+                },
+                "visualization": "barchart",
+                "showMiniChartForContinuousAxis": true,
+                "masterVersion": 0.96,
+                "snapshotData": {
+                  "object": {
+                    "size": {
+                      "w": 1565,
+                      "h": 547
+                    }
+                  },
+                  "rtl": false,
+                  "content": {
+                    "size": {
+                      "w": 1564.7222900390625,
+                      "h": 509.7106628417969
+                    },
+                    "chartData": {
+                      "scrollOffset": 25.25,
+                      "zoom": {
+                        "min": 0,
+                        "max": 0
+                      }
+                    }
+                  },
+                  "parent": {
+                    "h": 1308.15,
+                    "w": 2844.44
+                  }
+                },
+                "reducedHyperCube": {
+                  "qSize": {
+                    "qcx": 2,
+                    "qcy": 79
+                  },
+                  "qDimensionInfo": [
+                    {
+                      "qFallbackTitle": "Date.Date",
+                      "qApprMaxGlyphCount": 5,
+                      "qCardinal": 79,
+                      "qSortIndicator": "A",
+                      "qGroupFallbackTitles": [
+                        "Date.Date"
+                      ],
+                      "qGroupPos": 0,
+                      "qStateCounts": {
+                        "qLocked": 0,
+                        "qSelected": 0,
+                        "qOption": 79,
+                        "qDeselected": 0,
+                        "qAlternative": 0,
+                        "qExcluded": 0,
+                        "qSelectedExcluded": 0,
+                        "qLockedExcluded": 0
+                      },
+                      "qTags": [
+                        "$numeric",
+                        "$integer",
+                        "$timestamp",
+                        "$date"
+                      ],
+                      "qDimensionType": "N",
+                      "qGrouping": "N",
+                      "qNumFormat": {
+                        "qType": "D",
+                        "qnDec": 0,
+                        "qUseThou": 0,
+                        "qFmt": "D/MM"
+                      },
+                      "qIsAutoFormat": true,
+                      "qGroupFieldDefs": [
+                        "=Date.Short"
+                      ],
+                      "qMin": 43831,
+                      "qMax": 43909,
+                      "qContinuousAxes": true,
+                      "qAttrExprInfo": [],
+                      "qAttrDimInfo": [],
+                      "qCardinalities": {
+                        "qCardinal": 79,
+                        "qHypercubeCardinal": 79,
+                        "qAllValuesCardinal": -1
+                      },
+                      "autoSort": true,
+                      "cId": "mHesRH",
+                      "othersLabel": "Others"
+                    }
+                  ],
+                  "qMeasureInfo": [
+                    {
+                      "qFallbackTitle": "Sum(Kwh)",
+                      "qApprMaxGlyphCount": 15,
+                      "qCardinal": 0,
+                      "qSortIndicator": "D",
+                      "qNumFormat": {
+                        "qType": "R",
+                        "qnDec": 0,
+                        "qUseThou": 1,
+                        "qFmt": "##############",
+                        "qDec": "."
+                      },
+                      "qMin": 0.57,
+                      "qMax": 38.21999999999998,
+                      "qIsAutoFormat": true,
+                      "qAttrExprInfo": [
+                        {
+                          "qMin": 4278222848,
+                          "qMax": 4278222848,
+                          "qFallbackTitle": "if (Date = FirstSortedValue(total Date, -aggr(sum(Kwh), Date)), green(), \r\n\tif (Date = FirstSortedValue(Date, -aggr(total Max(aggr(avg({<Inverter={\"AAN*\"}>}Pac1), TimeBucket, Date))+Max(aggr(avg({<Inverter={\"AAR*\"}>}Pac1), TimeBucket, Date)), Date)), '#ffcf02', '#4477aa'))",
+                          "qMinText": "RGB(0,128,0)",
+                          "qMaxText": "RGB(0,128,0)",
+                          "id": "colorByExpression"
+                        }
+                      ],
+                      "qAttrDimInfo": [],
+                      "qTrendLines": [
+                        {
+                          "qType": "AVERAGE",
+                          "qCoeff": [
+                            11.579493670886073
+                          ],
+                          "qR2": 0,
+                          "qExpression": "y = 11.579",
+                          "qElemNo": -1,
+                          "label": "Avg",
+                          "style": {
+                            "autoColor": true,
+                            "paletteColor": {
+                              "color": "#f93f17",
+                              "index": 9
+                            },
+                            "dashed": true,
+                            "lineDash": "8, 4"
+                          },
+                          "cId": "SyKT"
+                        }
+                      ],
+                      "autoSort": true,
+                      "cId": "Ddb",
+                      "numFormatFromTemplate": true
+                    }
+                  ],
+                  "qEffectiveInterColumnSortOrder": [
+                    0,
+                    1
+                  ],
+                  "qGrandTotalRow": [
+                    {
+                      "qText": "914.77999999991",
+                      "qNum": 914.7799999999085,
+                      "qElemNumber": -1,
+                      "qState": "X",
+                      "qIsTotalCell": true
+                    }
+                  ],
+                  "qDataPages": [
+                    {
+                      "qMatrix": [
+                        [
+                          {
+                            "qText": "1/01",
+                            "qNum": 43831,
+                            "qElemNumber": 35,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "1.02",
+                            "qNum": 1.02,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "2/01",
+                            "qNum": 43832,
+                            "qElemNumber": 36,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "1.23",
+                            "qNum": 1.23,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "3/01",
+                            "qNum": 43833,
+                            "qElemNumber": 37,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "0.57",
+                            "qNum": 0.57,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "4/01",
+                            "qNum": 43834,
+                            "qElemNumber": 38,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "0.98",
+                            "qNum": 0.98,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "5/01",
+                            "qNum": 43835,
+                            "qElemNumber": 39,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "1.11",
+                            "qNum": 1.11,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "6/01",
+                            "qNum": 43836,
+                            "qElemNumber": 40,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "6.66",
+                            "qNum": 6.66,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "7/01",
+                            "qNum": 43837,
+                            "qElemNumber": 41,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "1.65",
+                            "qNum": 1.65,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "8/01",
+                            "qNum": 43838,
+                            "qElemNumber": 42,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "2.09",
+                            "qNum": 2.089999999999999,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "9/01",
+                            "qNum": 43839,
+                            "qElemNumber": 43,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "3.67",
+                            "qNum": 3.669999999999993,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "10/01",
+                            "qNum": 43840,
+                            "qElemNumber": 44,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "3.59",
+                            "qNum": 3.5899999999999954,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "11/01",
+                            "qNum": 43841,
+                            "qElemNumber": 45,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "5.81",
+                            "qNum": 5.809999999999995,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "12/01",
+                            "qNum": 43842,
+                            "qElemNumber": 46,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "3.2",
+                            "qNum": 3.199999999999995,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "13/01",
+                            "qNum": 43843,
+                            "qElemNumber": 47,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "5.2",
+                            "qNum": 5.199999999999996,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "14/01",
+                            "qNum": 43844,
+                            "qElemNumber": 48,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "4.68",
+                            "qNum": 4.679999999999998,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "15/01",
+                            "qNum": 43845,
+                            "qElemNumber": 49,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "12.73",
+                            "qNum": 12.72999999999999,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "16/01",
+                            "qNum": 43846,
+                            "qElemNumber": 50,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "20.53",
+                            "qNum": 20.529999999999998,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "17/01",
+                            "qNum": 43847,
+                            "qElemNumber": 51,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "3.43",
+                            "qNum": 3.4299999999999953,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "18/01",
+                            "qNum": 43848,
+                            "qElemNumber": 52,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "6.08",
+                            "qNum": 6.079999999999989,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "19/01",
+                            "qNum": 43849,
+                            "qElemNumber": 53,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "10.82",
+                            "qNum": 10.819999999999993,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "20/01",
+                            "qNum": 43850,
+                            "qElemNumber": 54,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "20.16",
+                            "qNum": 20.16,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "21/01",
+                            "qNum": 43851,
+                            "qElemNumber": 55,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "22.05",
+                            "qNum": 22.049999999999983,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "22/01",
+                            "qNum": 43852,
+                            "qElemNumber": 56,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "23.28",
+                            "qNum": 23.279999999999998,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "23/01",
+                            "qNum": 43853,
+                            "qElemNumber": 57,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "4.74",
+                            "qNum": 4.739999999999995,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "24/01",
+                            "qNum": 43854,
+                            "qElemNumber": 58,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "6.04",
+                            "qNum": 6.039999999999994,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "25/01",
+                            "qNum": 43855,
+                            "qElemNumber": 59,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "4.85",
+                            "qNum": 4.8499999999999925,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "26/01",
+                            "qNum": 43856,
+                            "qElemNumber": 60,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "10.56",
+                            "qNum": 10.559999999999993,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "27/01",
+                            "qNum": 43857,
+                            "qElemNumber": 61,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "2.9",
+                            "qNum": 2.8999999999999932,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "28/01",
+                            "qNum": 43858,
+                            "qElemNumber": 62,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "5.98",
+                            "qNum": 5.9799999999999915,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "29/01",
+                            "qNum": 43859,
+                            "qElemNumber": 63,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "9.6",
+                            "qNum": 9.599999999999993,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "30/01",
+                            "qNum": 43860,
+                            "qElemNumber": 64,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "7.47",
+                            "qNum": 7.4699999999999935,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "31/01",
+                            "qNum": 43861,
+                            "qElemNumber": 65,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "5.04",
+                            "qNum": 5.039999999999994,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "1/02",
+                            "qNum": 43862,
+                            "qElemNumber": 0,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "4.12",
+                            "qNum": 4.119999999999993,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "2/02",
+                            "qNum": 43863,
+                            "qElemNumber": 1,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "4.67",
+                            "qNum": 4.669999999999993,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "3/02",
+                            "qNum": 43864,
+                            "qElemNumber": 2,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "6.8",
+                            "qNum": 6.799999999999997,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "4/02",
+                            "qNum": 43865,
+                            "qElemNumber": 3,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "7.78",
+                            "qNum": 7.779999999999994,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "5/02",
+                            "qNum": 43866,
+                            "qElemNumber": 4,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "26.73",
+                            "qNum": 26.730000000000032,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "6/02",
+                            "qNum": 43867,
+                            "qElemNumber": 5,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "26.47",
+                            "qNum": 26.47000000000001,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "7/02",
+                            "qNum": 43868,
+                            "qElemNumber": 6,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "26.88",
+                            "qNum": 26.880000000000017,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "8/02",
+                            "qNum": 43869,
+                            "qElemNumber": 7,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "5.61",
+                            "qNum": 5.609999999999996,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "9/02",
+                            "qNum": 43870,
+                            "qElemNumber": 8,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "8.44",
+                            "qNum": 8.439999999999998,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "10/02",
+                            "qNum": 43871,
+                            "qElemNumber": 9,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "16.03",
+                            "qNum": 16.029999999999994,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "11/02",
+                            "qNum": 43872,
+                            "qElemNumber": 10,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "13.94",
+                            "qNum": 13.940000000000001,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "12/02",
+                            "qNum": 43873,
+                            "qElemNumber": 11,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "7.39",
+                            "qNum": 7.3899999999999935,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "13/02",
+                            "qNum": 43874,
+                            "qElemNumber": 12,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "7.18",
+                            "qNum": 7.179999999999987,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "14/02",
+                            "qNum": 43875,
+                            "qElemNumber": 13,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "10.95",
+                            "qNum": 10.94999999999999,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "15/02",
+                            "qNum": 43876,
+                            "qElemNumber": 14,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "22.49",
+                            "qNum": 22.489999999999995,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "16/02",
+                            "qNum": 43877,
+                            "qElemNumber": 15,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "13.5",
+                            "qNum": 13.499999999999993,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "17/02",
+                            "qNum": 43878,
+                            "qElemNumber": 16,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "11.35",
+                            "qNum": 11.349999999999996,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "18/02",
+                            "qNum": 43879,
+                            "qElemNumber": 17,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "9.1",
+                            "qNum": 9.09999999999999,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "19/02",
+                            "qNum": 43880,
+                            "qElemNumber": 18,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "19.94",
+                            "qNum": 19.939999999999976,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "20/02",
+                            "qNum": 43881,
+                            "qElemNumber": 19,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "7.06",
+                            "qNum": 7.059999999999999,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "21/02",
+                            "qNum": 43882,
+                            "qElemNumber": 20,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "18.39",
+                            "qNum": 18.38999999999999,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "22/02",
+                            "qNum": 43883,
+                            "qElemNumber": 21,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "12.39",
+                            "qNum": 12.39,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "23/02",
+                            "qNum": 43884,
+                            "qElemNumber": 22,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "3.46",
+                            "qNum": 3.459999999999993,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "24/02",
+                            "qNum": 43885,
+                            "qElemNumber": 23,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "6.72",
+                            "qNum": 6.719999999999992,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "25/02",
+                            "qNum": 43886,
+                            "qElemNumber": 24,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "16.64",
+                            "qNum": 16.639999999999976,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "26/02",
+                            "qNum": 43887,
+                            "qElemNumber": 25,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "11.83",
+                            "qNum": 11.829999999999998,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "27/02",
+                            "qNum": 43888,
+                            "qElemNumber": 26,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "3.91",
+                            "qNum": 3.909999999999995,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "28/02",
+                            "qNum": 43889,
+                            "qElemNumber": 27,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "19.83",
+                            "qNum": 19.83,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "29/02",
+                            "qNum": 43890,
+                            "qElemNumber": 28,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "9.85",
+                            "qNum": 9.849999999999993,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "1/03",
+                            "qNum": 43891,
+                            "qElemNumber": 29,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "13.55",
+                            "qNum": 13.549999999999992,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "2/03",
+                            "qNum": 43892,
+                            "qElemNumber": 30,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "9.74",
+                            "qNum": 9.739999999999988,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "3/03",
+                            "qNum": 43893,
+                            "qElemNumber": 31,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "9.38",
+                            "qNum": 9.379999999999987,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "4/03",
+                            "qNum": 43894,
+                            "qElemNumber": 32,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "17.82",
+                            "qNum": 17.819999999999993,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "5/03",
+                            "qNum": 43895,
+                            "qElemNumber": 33,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "5.86",
+                            "qNum": 5.8599999999999905,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "6/03",
+                            "qNum": 43896,
+                            "qElemNumber": 34,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "6.93",
+                            "qNum": 6.929999999999991,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "7/03",
+                            "qNum": 43897,
+                            "qElemNumber": 66,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "25.64",
+                            "qNum": 25.639999999999986,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "8/03",
+                            "qNum": 43898,
+                            "qElemNumber": 67,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "13.27",
+                            "qNum": 13.269999999999987,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "9/03",
+                            "qNum": 43899,
+                            "qElemNumber": 68,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "20.88",
+                            "qNum": 20.88,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "10/03",
+                            "qNum": 43900,
+                            "qElemNumber": 69,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "6.68",
+                            "qNum": 6.679999999999987,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "11/03",
+                            "qNum": 43901,
+                            "qElemNumber": 70,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "9.91",
+                            "qNum": 9.909999999999998,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "12/03",
+                            "qNum": 43902,
+                            "qElemNumber": 71,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "15.01",
+                            "qNum": 15.01,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "13/03",
+                            "qNum": 43903,
+                            "qElemNumber": 72,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "17.24",
+                            "qNum": 17.239999999999988,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "14/03",
+                            "qNum": 43904,
+                            "qElemNumber": 73,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "13.54",
+                            "qNum": 13.540000000000003,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "15/03",
+                            "qNum": 43905,
+                            "qElemNumber": 74,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "29.47",
+                            "qNum": 29.470000000000006,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "16/03",
+                            "qNum": 43906,
+                            "qElemNumber": 75,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "30.46",
+                            "qNum": 30.460000000000008,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "17/03",
+                            "qNum": 43907,
+                            "qElemNumber": 76,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "34.16",
+                            "qNum": 34.16,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "18/03",
+                            "qNum": 43908,
+                            "qElemNumber": 77,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "19.85",
+                            "qNum": 19.84999999999999,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "#4477aa",
+                                  "qNum": "NaN"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "qText": "19/03",
+                            "qNum": 43909,
+                            "qElemNumber": 78,
+                            "qState": "O"
+                          },
+                          {
+                            "qText": "38.22",
+                            "qNum": 38.21999999999998,
+                            "qElemNumber": 0,
+                            "qState": "L",
+                            "qAttrExps": {
+                              "qValues": [
+                                {
+                                  "qText": "RGB(0,128,0)",
+                                  "qNum": 4278222848
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      ],
+                      "qTails": [
+                        {
+                          "qUp": 0,
+                          "qDown": 0
+                        }
+                      ],
+                      "qArea": {
+                        "qLeft": 0,
+                        "qTop": 0,
+                        "qWidth": 2,
+                        "qHeight": 79
+                      }
+                    }
+                  ],
+                  "qPivotDataPages": [],
+                  "qStackedDataPages": [],
+                  "qMode": "S",
+                  "qNoOfLeftDims": -1,
+                  "qTreeNodesOnDim": [],
+                  "qColumnOrder": []
+                },
+                "visualizationType": "barchart",
+                "sourceObjectId": "MMNqSLd",
+                "sheetId": "d38b0131-e1ed-4735-833a-f6fd8a23bcd3",
+                "timestamp": 1584637125653,
+                "isClone": false,
+                "supportExport": true
+              },
+              "qBookmark": {
+                "qStateData": [
+                  {
+                    "qStateName": "$",
+                    "qFieldItems": []
+                  }
+                ],
+                "qUtcModifyTime": 43909.749131944445,
+                "qVariableItems": [],
+                "qPatches": []
+              }
+            }
+          },
+          {
+            "qProperty": {
+              "qInfo": {
+                "qId": "EVjhLz",
+                "qType": "slideitem"
+              },
+              "qMetaDef": {},
+              "qEmbeddedSnapshotDef": {},
+              "title": "",
+              "sheetId": "",
+              "ratio": true,
+              "position": {
+                "top": "37.03671%",
+                "left": "39.58302%",
+                "width": "20.82966%",
+                "height": "11.10928%",
+                "z-index": 5,
+                "right": "auto"
+              },
+              "visualization": "snapshot",
+              "visualizationType": "kpi",
+              "style": {
+                "id": "e9d7ac1b-8fe7-49bc-91a5-55ff5b52b64e"
+              }
+            },
+            "qChildren": [],
+            "qEmbeddedSnapshotRef": {
+              "qProperties": {
+                "qInfo": {
+                  "qId": "236a2d78-1038-4888-b084-99802c87675a",
+                  "qType": "embeddedsnapshot"
+                },
+                "qMetaDef": {
+                  "title": "Vs. Last Week",
+                  "description": "",
+                  "annotation": ""
+                },
+                "creationDate": "2020-03-19T16:59:15.868Z",
+                "qMeta": {
+                  "privileges": [
+                    "read",
+                    "update",
+                    "delete",
+                    "exportdata"
+                  ]
+                },
+                "qSelectionInfo": {},
+                "qHyperCube": {
+                  "qSize": {
+                    "qcx": 1,
+                    "qcy": 1
+                  },
+                  "qDimensionInfo": [],
+                  "qMeasureInfo": [
+                    {
+                      "qFallbackTitle": "Vs. Last Week",
+                      "qApprMaxGlyphCount": 4,
+                      "qCardinal": 0,
+                      "qSortIndicator": "D",
+                      "qNumFormat": {
+                        "qType": "F",
+                        "qnDec": 2,
+                        "qUseThou": 0,
+                        "qFmt": "0.0%",
+                        "qDec": "."
+                      },
+                      "qMin": 0.08835270114432658,
+                      "qMax": 0.08835270114432658,
+                      "qAttrExprInfo": [],
+                      "qAttrDimInfo": [],
+                      "qLibraryId": "141af92e-90c6-401c-a7cb-dbe35d913150",
+                      "qTrendLines": [],
+                      "coloring": {
+                        "gradient": {
+                          "colors": [
+                            {
+                              "color": "#f93f17",
+                              "index": 10
+                            },
+                            {
+                              "color": "#46c646",
+                              "index": 2
+                            }
+                          ],
+                          "breakTypes": [
+                            false
+                          ],
+                          "limits": [
+                            0
+                          ],
+                          "limitType": "absolute"
+                        }
+                      },
+                      "autoSort": true,
+                      "cId": "NedLYxG",
+                      "numFormatFromTemplate": false,
+                      "measureAxis": {
+                        "min": -0.0769230769230771,
+                        "max": 0.05769230769230782
+                      },
+                      "conditionalColoring": {
+                        "useConditionalColoring": true,
+                        "singleColor": 3,
+                        "paletteSingleColor": {
+                          "index": 6
+                        },
+                        "segments": {
+                          "limits": [
+                            {
+                              "value": 0,
+                              "gradient": false
+                            }
+                          ],
+                          "paletteColors": [
+                            {
+                              "color": "#f93f17",
+                              "index": 10
+                            },
+                            {
+                              "color": "#46c646",
+                              "index": 2
+                            }
+                          ]
+                        },
+                        "useBaseColors": false
+                      },
+                      "isCustomFormatted": false
+                    }
+                  ],
+                  "qEffectiveInterColumnSortOrder": [
+                    0
+                  ],
+                  "qGrandTotalRow": [
+                    {
+                      "qText": "8.8%",
+                      "qNum": 0.08835270114432658,
+                      "qElemNumber": -1,
+                      "qState": "X",
+                      "qIsTotalCell": true
+                    }
+                  ],
+                  "qDataPages": [
+                    {
+                      "qMatrix": [
+                        [
+                          {
+                            "qText": "8.8%",
+                            "qNum": 0.08835270114432658,
+                            "qElemNumber": 0,
+                            "qState": "L"
+                          }
+                        ]
+                      ],
+                      "qTails": [],
+                      "qArea": {
+                        "qLeft": 0,
+                        "qTop": 0,
+                        "qWidth": 1,
+                        "qHeight": 1
+                      }
+                    }
+                  ],
+                  "qPivotDataPages": [],
+                  "qStackedDataPages": [],
+                  "qMode": "S",
+                  "qNoOfLeftDims": -1,
+                  "qTreeNodesOnDim": [],
+                  "qColumnOrder": []
+                },
+                "showTitles": false,
+                "title": "",
+                "subtitle": "",
+                "footnote": "",
+                "showDetails": false,
+                "visualization": "kpi",
+                "showMeasureTitle": true,
+                "textAlign": "center",
+                "fontSize": "M",
+                "useLink": false,
+                "sheetLink": "",
+                "openUrlInNewTab": true,
+                "snapshotData": {
+                  "object": {
+                    "size": {
+                      "w": 463,
+                      "h": 130
+                    }
+                  },
+                  "rtl": false,
+                  "isZoomed": false,
+                  "elementRatio": 0.28119870856408846,
+                  "parent": {
+                    "h": 1308.15,
+                    "w": 2844.44
+                  }
+                },
+                "visualizationType": "kpi",
+                "sourceObjectId": "BYRFGu",
+                "sheetId": "d38b0131-e1ed-4735-833a-f6fd8a23bcd3",
+                "timestamp": 1584637155817,
+                "isClone": false,
+                "supportExport": true
+              },
+              "qBookmark": {
+                "qStateData": [
+                  {
+                    "qStateName": "$",
+                    "qFieldItems": []
+                  }
+                ],
+                "qUtcModifyTime": 43909.74947916667,
+                "qVariableItems": [],
+                "qPatches": []
+              }
+            }
+          }
+        ]
+      },
+      {
+        "qProperty": {
+          "qInfo": {
+            "qId": "HMuPmqd",
+            "qType": "slide"
+          },
+          "qMetaDef": {},
+          "rank": 0,
+          "qChildListDef": {
+            "qData": {
+              "title": "/title",
+              "sheetId": "/sheetId",
+              "ratio": "/ratio",
+              "position": "/position",
+              "dataPath": "/dataPath",
+              "srcPath": "/srcPath",
+              "visualization": "/visualization",
+              "visualizationType": "/visualizationType",
+              "style": "/style"
+            }
+          }
+        },
+        "qChildren": []
+      }
+    ]
+  }
+]

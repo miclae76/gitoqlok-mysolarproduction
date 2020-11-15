@@ -1,0 +1,1063 @@
+[
+  {
+    "qIsHidden": true,
+    "qIsSystem": true,
+    "qName": "$Field",
+    "qCardinal": 94,
+    "qTags": [
+      "$key",
+      "$hidden",
+      "$system",
+      "$text"
+    ],
+    "qSrcTables": []
+  },
+  {
+    "qIsHidden": true,
+    "qIsSystem": true,
+    "qName": "$FieldNo",
+    "qCardinal": 33,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$hidden",
+      "$system"
+    ],
+    "qSrcTables": []
+  },
+  {
+    "qIsHidden": true,
+    "qIsSystem": true,
+    "qName": "$Fields",
+    "qCardinal": 7,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$hidden",
+      "$system"
+    ],
+    "qSrcTables": []
+  },
+  {
+    "qIsHidden": true,
+    "qIsSystem": true,
+    "qName": "$Info",
+    "qCardinal": 1,
+    "qTags": [
+      "$hidden",
+      "$system",
+      "$text",
+      "$ascii"
+    ],
+    "qSrcTables": []
+  },
+  {
+    "qIsHidden": true,
+    "qIsSystem": true,
+    "qName": "$Rows",
+    "qCardinal": 10,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$hidden",
+      "$system"
+    ],
+    "qSrcTables": []
+  },
+  {
+    "qIsHidden": true,
+    "qIsSystem": true,
+    "qName": "$Table",
+    "qCardinal": 10,
+    "qTags": [
+      "$key",
+      "$hidden",
+      "$system",
+      "$text",
+      "$ascii"
+    ],
+    "qSrcTables": []
+  },
+  {
+    "qName": "Alertes",
+    "qCardinal": 1,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Alertes"
+    ]
+  },
+  {
+    "qName": "Azimut",
+    "qCardinal": 7438,
+    "qTags": [],
+    "qSrcTables": [
+      "SunCourse"
+    ]
+  },
+  {
+    "qName": "Correction",
+    "qCardinal": 5,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Corrections"
+    ]
+  },
+  {
+    "qName": "Coucher du soleil",
+    "qCardinal": 232,
+    "qTags": [],
+    "qSrcTables": [
+      "Sunrise_2020"
+    ]
+  },
+  {
+    "qName": "DataFile",
+    "qCardinal": 43,
+    "qTags": [
+      "$text",
+      "$ascii"
+    ],
+    "qSrcTables": [
+      "Production"
+    ]
+  },
+  {
+    "qName": "Date",
+    "qCardinal": 366,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$timestamp",
+      "$date",
+      "$key"
+    ],
+    "qSrcTables": [
+      "SunCourse",
+      "Corrections",
+      "Alertes",
+      "Production",
+      "Meteo",
+      "Sunrise_2020",
+      "$OFMap Date"
+    ]
+  },
+  {
+    "qName": "Date.Short",
+    "qCardinal": 295,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$timestamp",
+      "$date"
+    ],
+    "qSrcTables": [
+      "Production"
+    ]
+  },
+  {
+    "qName": "Date_Meteo",
+    "qCardinal": 253,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$timestamp",
+      "$date"
+    ],
+    "qSrcTables": [
+      "Meteo"
+    ]
+  },
+  {
+    "qName": "Day",
+    "qCardinal": 31,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Meteo"
+    ]
+  },
+  {
+    "qName": "Direction",
+    "qCardinal": 16,
+    "qTags": [
+      "$text",
+      "$ascii"
+    ],
+    "qSrcTables": [
+      "WindRose"
+    ]
+  },
+  {
+    "qName": "Direction_Angle_From",
+    "qCardinal": 16,
+    "qTags": [
+      "$numeric",
+      "$keypart"
+    ],
+    "qSrcTables": [
+      "WindRose",
+      "Meteo"
+    ]
+  },
+  {
+    "qName": "Direction_Anglet_To",
+    "qCardinal": 16,
+    "qTags": [
+      "$numeric",
+      "$keypart"
+    ],
+    "qSrcTables": [
+      "WindRose",
+      "Meteo"
+    ]
+  },
+  {
+    "qName": "Elevation",
+    "qCardinal": 4662,
+    "qTags": [],
+    "qSrcTables": [
+      "SunCourse"
+    ]
+  },
+  {
+    "qName": "Fac",
+    "qCardinal": 79,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Production"
+    ]
+  },
+  {
+    "qName": "Hist.city_name",
+    "qCardinal": 1,
+    "qTags": [
+      "$text",
+      "$ascii"
+    ],
+    "qSrcTables": [
+      "Hist"
+    ]
+  },
+  {
+    "qName": "Hist.clouds_all",
+    "qCardinal": 101,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Hist"
+    ]
+  },
+  {
+    "qName": "Hist.dt",
+    "qCardinal": 178056,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Hist"
+    ]
+  },
+  {
+    "qName": "Hist.dt_iso",
+    "qCardinal": 7619,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$timestamp",
+      "$date",
+      "$key"
+    ],
+    "qSrcTables": [
+      "Hist",
+      "AUTOGENERATE(200)"
+    ]
+  },
+  {
+    "qName": "Hist.feels_like",
+    "qCardinal": 4952,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Hist"
+    ]
+  },
+  {
+    "qName": "Hist.grnd_level",
+    "qCardinal": 1,
+    "qTags": [
+      "$text",
+      "$ascii"
+    ],
+    "qSrcTables": [
+      "Hist"
+    ]
+  },
+  {
+    "qName": "Hist.humidity",
+    "qCardinal": 90,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Hist"
+    ]
+  },
+  {
+    "qName": "Hist.lat",
+    "qCardinal": 1,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Hist"
+    ]
+  },
+  {
+    "qName": "Hist.lon",
+    "qCardinal": 1,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Hist"
+    ]
+  },
+  {
+    "qName": "Hist.pressure",
+    "qCardinal": 83,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Hist"
+    ]
+  },
+  {
+    "qName": "Hist.rain_1h",
+    "qCardinal": 445,
+    "qTags": [],
+    "qSrcTables": [
+      "Hist"
+    ]
+  },
+  {
+    "qName": "Hist.rain_3h",
+    "qCardinal": 35,
+    "qTags": [],
+    "qSrcTables": [
+      "Hist"
+    ]
+  },
+  {
+    "qName": "Hist.sea_level",
+    "qCardinal": 1,
+    "qTags": [
+      "$text",
+      "$ascii"
+    ],
+    "qSrcTables": [
+      "Hist"
+    ]
+  },
+  {
+    "qName": "Hist.snow_1h",
+    "qCardinal": 145,
+    "qTags": [],
+    "qSrcTables": [
+      "Hist"
+    ]
+  },
+  {
+    "qName": "Hist.snow_3h",
+    "qCardinal": 6,
+    "qTags": [],
+    "qSrcTables": [
+      "Hist"
+    ]
+  },
+  {
+    "qName": "Hist.temp",
+    "qCardinal": 4402,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Hist"
+    ]
+  },
+  {
+    "qName": "Hist.temp_max",
+    "qCardinal": 3991,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Hist"
+    ]
+  },
+  {
+    "qName": "Hist.temp_min",
+    "qCardinal": 3544,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Hist"
+    ]
+  },
+  {
+    "qName": "Hist.timezone",
+    "qCardinal": 2,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Hist"
+    ]
+  },
+  {
+    "qName": "Hist.weather_description",
+    "qCardinal": 36,
+    "qTags": [
+      "$text",
+      "$ascii"
+    ],
+    "qSrcTables": [
+      "Hist"
+    ]
+  },
+  {
+    "qName": "Hist.weather_icon",
+    "qCardinal": 18,
+    "qTags": [
+      "$text",
+      "$ascii"
+    ],
+    "qSrcTables": [
+      "Hist"
+    ]
+  },
+  {
+    "qName": "Hist.weather_id",
+    "qCardinal": 36,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Hist"
+    ]
+  },
+  {
+    "qName": "Hist.weather_main",
+    "qCardinal": 10,
+    "qTags": [
+      "$text",
+      "$ascii"
+    ],
+    "qSrcTables": [
+      "Hist"
+    ]
+  },
+  {
+    "qName": "Hist.wind_deg",
+    "qCardinal": 361,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Hist"
+    ]
+  },
+  {
+    "qName": "Hist.wind_speed",
+    "qCardinal": 666,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Hist"
+    ]
+  },
+  {
+    "qName": "Iac1",
+    "qCardinal": 141,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Production"
+    ]
+  },
+  {
+    "qName": "Iac2",
+    "qCardinal": 1,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Production"
+    ]
+  },
+  {
+    "qName": "Iac3",
+    "qCardinal": 1,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Production"
+    ]
+  },
+  {
+    "qName": "Inverter",
+    "qCardinal": 2,
+    "qTags": [
+      "$text",
+      "$ascii"
+    ],
+    "qSrcTables": [
+      "Production"
+    ]
+  },
+  {
+    "qName": "Ipv1",
+    "qCardinal": 78,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Production"
+    ]
+  },
+  {
+    "qName": "Ipv2",
+    "qCardinal": 76,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Production"
+    ]
+  },
+  {
+    "qName": "Ipv3",
+    "qCardinal": 1,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Production"
+    ]
+  },
+  {
+    "qName": "Kwh",
+    "qCardinal": 532,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Production"
+    ]
+  },
+  {
+    "qName": "Lever du soleil",
+    "qCardinal": 178,
+    "qTags": [],
+    "qSrcTables": [
+      "Sunrise_2020"
+    ]
+  },
+  {
+    "qName": "Longueur du jour",
+    "qCardinal": 275,
+    "qTags": [],
+    "qSrcTables": [
+      "Sunrise_2020"
+    ]
+  },
+  {
+    "qName": "Month",
+    "qCardinal": 10,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Meteo"
+    ]
+  },
+  {
+    "qName": "Musson Mean Sea Level Pressure [MSL]",
+    "qCardinal": 136,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Meteo"
+    ]
+  },
+  {
+    "qName": "Musson Mean Sea Level Pressure [MSL]1",
+    "qCardinal": 133,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Meteo"
+    ]
+  },
+  {
+    "qName": "Musson Mean Sea Level Pressure [MSL]2",
+    "qCardinal": 199,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Meteo"
+    ]
+  },
+  {
+    "qName": "Musson Sunshine Duration",
+    "qCardinal": 195,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Meteo"
+    ]
+  },
+  {
+    "qName": "Musson Wind Speed [10 m]",
+    "qCardinal": 168,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Meteo"
+    ]
+  },
+  {
+    "qName": "Musson Wind Speed [10 m]2",
+    "qCardinal": 202,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Meteo"
+    ]
+  },
+  {
+    "qName": "Musson Wind Speed [80 m]",
+    "qCardinal": 169,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Meteo"
+    ]
+  },
+  {
+    "qName": "Musson Wind Speed [80 m]2",
+    "qCardinal": 202,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Meteo"
+    ]
+  },
+  {
+    "qName": "MyInverters",
+    "qCardinal": 2,
+    "qTags": [
+      "$text",
+      "$ascii"
+    ],
+    "qSrcTables": [
+      "Inverter_List"
+    ]
+  },
+  {
+    "qName": "Pac1",
+    "qCardinal": 3107,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Production"
+    ]
+  },
+  {
+    "qName": "Pac2",
+    "qCardinal": 1,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Production"
+    ]
+  },
+  {
+    "qName": "Pac3",
+    "qCardinal": 1,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Production"
+    ]
+  },
+  {
+    "qName": "Relative Humidity daily mean [2 m above gnd]",
+    "qCardinal": 234,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Meteo"
+    ]
+  },
+  {
+    "qName": "Shortwave Radiation daily sum [sfc]",
+    "qCardinal": 51,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Meteo"
+    ]
+  },
+  {
+    "qName": "Sunshine Duration daily sum [sfc]",
+    "qCardinal": 40,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Meteo"
+    ]
+  },
+  {
+    "qName": "Temperature daily max [2 m above gnd]",
+    "qCardinal": 240,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Meteo"
+    ]
+  },
+  {
+    "qName": "Temperature daily mean [2 m above gnd]",
+    "qCardinal": 252,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Meteo"
+    ]
+  },
+  {
+    "qName": "Temperature daily min [2 m above gnd]",
+    "qCardinal": 241,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Meteo"
+    ]
+  },
+  {
+    "qName": "Temperature(℃)",
+    "qCardinal": 404,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Production"
+    ]
+  },
+  {
+    "qName": "Time",
+    "qCardinal": 1011,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Production"
+    ]
+  },
+  {
+    "qName": "Time(GMT +1)",
+    "qCardinal": 64236,
+    "qTags": [
+      "$text",
+      "$ascii"
+    ],
+    "qSrcTables": [
+      "Production"
+    ]
+  },
+  {
+    "qName": "TimeBucket",
+    "qCardinal": 131,
+    "qTags": [
+      "$numeric",
+      "$keypart"
+    ],
+    "qSrcTables": [
+      "SunCourse",
+      "Production"
+    ]
+  },
+  {
+    "qName": "TimeStamp",
+    "qCardinal": 64236,
+    "qTags": [
+      "$numeric",
+      "$timestamp"
+    ],
+    "qSrcTables": [
+      "Production"
+    ]
+  },
+  {
+    "qName": "Today's Energy(kWh)",
+    "qCardinal": 3048,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Production"
+    ]
+  },
+  {
+    "qName": "Total Cloud Cover daily max [sfc]",
+    "qCardinal": 1,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Meteo"
+    ]
+  },
+  {
+    "qName": "Total Cloud Cover daily mean [sfc]",
+    "qCardinal": 221,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Meteo"
+    ]
+  },
+  {
+    "qName": "Total Cloud Cover daily min [sfc]",
+    "qCardinal": 20,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Meteo"
+    ]
+  },
+  {
+    "qName": "Total Energy(kWh)",
+    "qCardinal": 34619,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Production"
+    ]
+  },
+  {
+    "qName": "Total Precipitation (high resolution) daily sum [sfc]",
+    "qCardinal": 69,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Meteo"
+    ]
+  },
+  {
+    "qName": "Vac1",
+    "qCardinal": 181,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Production"
+    ]
+  },
+  {
+    "qName": "Vac2",
+    "qCardinal": 1,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Production"
+    ]
+  },
+  {
+    "qName": "Vac3",
+    "qCardinal": 1,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Production"
+    ]
+  },
+  {
+    "qName": "Vpv1",
+    "qCardinal": 2363,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Production"
+    ]
+  },
+  {
+    "qName": "Vpv2",
+    "qCardinal": 1605,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Production"
+    ]
+  },
+  {
+    "qName": "Vpv3",
+    "qCardinal": 1,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Production"
+    ]
+  },
+  {
+    "qName": "Wind Direction daily mean [10 m above gnd]",
+    "qCardinal": 253,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Meteo"
+    ]
+  },
+  {
+    "qName": "Wind Direction daily mean [80 m above gnd]",
+    "qCardinal": 253,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Meteo"
+    ]
+  },
+  {
+    "qName": "Wind Speed daily max [10 m above gnd]",
+    "qCardinal": 247,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Meteo"
+    ]
+  },
+  {
+    "qName": "Wind Speed daily max [80 m above gnd]",
+    "qCardinal": 246,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Meteo"
+    ]
+  },
+  {
+    "qName": "Wind Speed daily mean [10 m above gnd]",
+    "qCardinal": 51,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Meteo"
+    ]
+  },
+  {
+    "qName": "Wind Speed daily mean [80 m above gnd]",
+    "qCardinal": 51,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Meteo"
+    ]
+  },
+  {
+    "qName": "Wind Speed daily min [10 m above gnd]",
+    "qCardinal": 48,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Meteo"
+    ]
+  },
+  {
+    "qName": "Wind Speed daily min [80 m above gnd]",
+    "qCardinal": 50,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Meteo"
+    ]
+  },
+  {
+    "qName": "Year",
+    "qCardinal": 1,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Meteo"
+    ]
+  }
+]
